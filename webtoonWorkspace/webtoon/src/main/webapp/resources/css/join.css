@@ -1,0 +1,99 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin:0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 98%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#check-username{
+  width: 15%;
+  padding: 10px;
+  background-color: #ff9696;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+
+#first, #second{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#button-in-input{
+  position: relative;
+}
+
+#check-username{
+  position: absolute;
+  width: 80px;
+  height: 30px;
+  top: 3px;
+  bottom: 0;
+  right: 5px;
+  border-radius: 3px;
+}
+
+#check-username:hover{
+  background-color: red;
+}
+
+#moont{
+  width: 500px;
+  height: 130px;
+  object-fit: cover;
+  margin-left: 55px;
+}
+
+

@@ -1,0 +1,99 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 400px;
+  height: 600px; /* 수정 */
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 5%;
+  background-color: #fff;
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h2 {
+  margin-top: 0;
+  text-align: center;
+}
+h1 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button[type="submit"] {
+  background-color: #87c1ff;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button[type="submit"]:hover {
+  background-color: gray;
+}
+
+.form-group{
+  margin-right: 10px;
+}
+
+#btn_submit{
+  border: 1px solid #1d1966;
+  border-radius: 7px;
+}
+
+#pree{
+  text-align: center;
+}
+
+a{
+  text-decoration-line: none;
+}
+
+pre{
+  margin-top: 20px;
+}
+
+
+#div-all-img{
+  width: 350px;
+  height: 100px;
+}
+
+#main-logo{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#last-pre{
+text-align: center;
+}
+
+p{
+display: inline-block;
+}
