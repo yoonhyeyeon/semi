@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="BoardMapper">
+
+	<insert id="notion_insert">
+		INSERT INTO NOTION
+		(
+		NO
+		, WRITER_NO
+		, TITLE
+		, CONTENT
+		)
+		VALUES
+		(
+		SEQ_NOTION_NO.NEXTVAL
+		, ${writer_no}
+		, #{title}
+		, #{content}
+		)
+	</insert>
+
+	<select id="notion_list"
+		resultType="webtoon.notion.vo.NotionVo">
+		SELECT *
+		FROM NOTION N
+		JOIN ADMIN A
+		ON N.WRITER_NO = A.NO
+		WHERE N.DEL_YN = 'N'
+		ORDER BY N.NO DESC
+	</select>
+
+	<select id="notion_detail" resultType="webtoon.notion.vo.NotionVo">
+		SELECT 
+			N.NO 
+			,N.TITLE 
+			,N.CONTENT 
+			,A.NICK 
+			,N.ENROLL_DATE 
+		FROM NOTION N 
+		JOIN ADMIN A 
+		ON N.WRITER_NO = A.NO 
+		WHERE N.NO = ${no}
+		AND N.DEL_YN = 'N'
+	</select>
+	
+	<update id="notion_edit">
+		UPDATE NOTION SET 
+			TITLE = #{title}
+			, CONTENT = #{content}
+		 WHERE NO = ${no}
+	</update>
+
+	<update id="notion_delete">
+		UPDATE NOTION SET 
+		DEL_YN = 'Y' 
+		WHERE NO = ${no}
+		AND WRITER_NO = ${writer_no} 
+		AND DEL_YN = 'N'
+	</update>
+
+</mapper>

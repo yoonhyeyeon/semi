@@ -1,0 +1,155 @@
+body {
+	margin: 0;
+	padding: 1% 5%;
+	background-color: #f5f5f5;
+}
+
+main {
+	padding: 5%;
+	margin-top: 1.5%;
+	display: grid;
+	grid-template-columns: 1fr 6fr;
+	gap: 20px;
+}
+
+.menu {
+	width: 90%;
+	padding: 20px;
+	background-color: #DCE8FF;
+	border-radius: 10px;
+}
+
+#my {
+	margin-bottom: 20px;
+	padding: 10px;
+	background-color: #87c1ff;
+	border: 1px solid #6895c5;
+	border-radius: 10px;
+	display: grid;
+	grid-template-rows: repeat(4, 1fr);
+	gap: 10px;
+	justify-content: center;
+	align-items: center;
+}
+
+#insert_btn {
+	width: 170px;
+	height: 35px;
+	background-color: #6895c5;
+	border: none;
+	color: white;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+#insert_btn:hover {
+	background-color: #405b78;
+}
+
+.menu_btn {
+	padding: 10px 0;
+	text-align: center;
+}
+
+.menu_btn a {
+	display: block;
+	padding: 10px;
+	background-color: #87c1ff;
+	border-radius: 10px;
+	color: white;
+	text-decoration: none;
+	transition: background-color 0.3s;
+}
+
+.menu_btn a:hover {
+	background-color: #6895c5;
+}
+
+.list {
+	width: 90%;
+	padding: 20px;
+	margin-left: 10px;
+	background-color: white;
+	border: 1px solid #87c1ff;
+	border-radius: 10px;
+	display: grid;
+	grid-template-rows: 1fr 2fr 2fr 10fr;
+}
+
+.list_menu {
+	font-size: 0.8rem;
+	display: flex;
+	justify-content: space-between;
+}
+
+#list_btn a {
+	text-decoration: none;
+}
+
+#list_btn {
+	background-color: #87c1ff;
+	border-radius: 5px;
+	border: none;
+	color: #6895c5;
+}
+
+#title {
+	font-size: 1.5rem;
+}
+
+.profile {
+	width: 40px;
+	height: 40px;
+	background-color: #f0f0f0;
+	border: 1px solid #a0b1c3;
+	border-radius: 50%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 10fr;
+}
+
+#profile_icon {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+
+#profile_id {
+	width: 400px;
+	margin-left: 10px;
+	font-size: 0.9rem;
+	justify-content: start;
+	align-items: center;
+	font-weight: bold;
+}
+
+#date {
+	font-size: 0.8rem;
+	color: #666;
+}
+
+.content {
+	margin-top: 20px;
+	border: 1px solid #a0b1c3;
+	border-radius: 5px;
+}
+
+#content_in {
+	padding: 25px;
+}
+
+.under {
+	display: flex;
+	justify-content: end;
+}
+
+#edit_btn, #delete_btn {
+	background-color: #87c1ff;
+	border-radius: 5px;
+	border: none;
+	color: #140099;
+}
+
+#delete {
+	margin-left: 5px;
+}

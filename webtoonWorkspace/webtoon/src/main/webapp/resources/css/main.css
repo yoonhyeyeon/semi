@@ -1,0 +1,213 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+
+header {
+    background-color: #87c1ff; /* 배경을 투명하게 설정 */
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc; /* 하단 테두리를 추가 */
+}
+
+header #logo img {
+    height: 55px !important;  /* 로고 이미지의 높이를 150px로 설정, 우선순위 강제 적용 */
+    width: auto !important;    /* 이미지 원본 비율을 유지하면서 너비 자동 조절, 우선순위 강제 적용 */
+    max-height: none !important;  /* 최대 높이 제한 제거 */
+    max-width: none !important;   /* 최대 너비 제한 제거 */
+    border-radius: 7px;
+}
+
+#logo img, #user-controls a img {
+    display: block;
+    max-height: 40px; /* 로고와 아이콘의 최대 높이 제한 */
+}
+
+#user-controls a img {
+    height: 40px !important;
+    width: auto !important;
+}
+
+.webtoon-hr {
+    position: absolute; /* 절대 위치 */
+    top: 96px; /* 헤더 바로 아래 위치 */
+    left: 0; /* 왼쪽 정렬 */
+    width: 100%; /* 너비 100% */
+    border: 0;
+    height: 2px;
+    background-color: #f0e333;
+    margin: 0; /* 마진 제거 */
+    border: 1px solid #ece24d;
+}
+
+#mypage img {
+    height: 20px;
+    width: auto;
+}
+
+#user-controls a {
+    margin-left: 10px;
+    display: inline-block; /* 링크를 인라인 블록 요소로 설정 */
+    background: none; /* 배경 없음 */
+    border: none; /* 테두리 없음 */
+    cursor: pointer;
+}
+
+#user-controls button {
+    padding: 8px 16px;
+    margin-left: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+
+.promotion {
+    background-color: #dbdbdb !important; 
+    border: 3px solid #bdbdbd;
+    height: 300px;
+    margin: 40px;
+    padding: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 40px;
+}
+
+.webtoon-days {
+    display: flex;
+    width: 100%; /* 전체 너비 */
+    margin-bottom: 20px; /* 아래쪽 여백 */
+    background-color: #dbdbdb; /* 배경색 추가 */
+    border: 3px solid #bdbdbd; /* 테두리 추가 */
+    border-radius: 10px; /* 둥근 모서리 */
+    padding: 20px; /* 패딩 추가 */
+    box-sizing: border-box; /* 패딩 포함하여 박스 크기 계산 */
+}
+
+.webtoon-day {
+    width: 14.28%; /* 100% / 7 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px; /* 좌우 간격을 10px로 조정 */
+    box-sizing: border-box;
+}
+
+.webtoon-day h3 {
+    margin: 0; /* 상하 마진 제거 */
+    padding: 10px; /* 상하 패딩 추가 */
+    width: 100%; /* 너비 100% */
+    text-align: center; /* 중앙 정렬 */
+    background-color: #ffffff; /* 배경색 추가 */
+    border-bottom: 2px solid #ccc; /* 하단 테두리 */
+    border-radius: 8px 8px 0 0; /* 윗 부분 둥근 모서리 */
+}
+
+.webtoon-item {
+    width: 100%; /* 부모 요소의 폭을 꽉 채우도록 */
+    height: 250px; /* 높이 조정 */
+    margin-bottom: 15px; /* 아이템 간 간격을 15px로 설정 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* 넘치는 이미지 숨김 처리 */
+    border: 2px solid #b6b6b6; /* 검정색 테두리 추가 */
+    border-radius: 8px; /* 둥근 모서리 */
+    padding: 0; /* 상하 패딩을 0으로 설정 */
+    background-color: #ffffff; /* 배경색 추가 */
+}
+
+.webtoon-item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px; /* 이미지 둥근 모서리 */
+}
+
+@media screen and (max-width: 768px) {
+    .webtoon-day {
+        width: 20%; /* 모바일에서는 요일당 20% 너비 사용 */
+    }
+}
+
+.side-bar {
+    width: 20%;
+    padding: 10px;
+    text-align: center;
+}
+
+.side-bar input {
+    padding: 8px;
+    margin-bottom: 20px;
+    width: 97%;
+    border-radius: 8px; /* 검색창 둥글게 처리 */
+}
+
+.side-bar div {
+    background-color: #ccc;
+    width: 376px;
+    height: 100px;
+    border-radius: 8px; /* 광고 창 둥글게 처리 */
+}
+
+.promotion {
+    background-color: #ddd;
+    height: 300px;
+    margin: 40px;
+    padding: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* 이미지 컨테이너 너비 조정 */
+.slider-container {
+    display: flex;
+    overflow: hidden; /* 슬라이더의 오버플로우를 숨김 */
+    width: 100%;
+    height: 93%;
+    padding: 10px; /* 상하좌우 패딩으로 이미지와 컨테이너 사이 간격 조정 */
+}
+
+/* 이미지가 7개씩 보이게 하기 위한 조정 */
+.slider {
+    display: flex;
+    align-items: center;
+    transition: transform 0.5s ease;
+    justify-content: start; /* 이미지들을 슬라이더 시작 부분에서 정렬 */
+}
+
+.slider img {
+    width: calc((100% / 7) - 40px); /* 전체 너비에서 7개 이미지가 들어가며, 이미지 간 20px의 간격을 고려 */
+    height: auto; /* 이미지의 높이를 자동으로 조절 */
+    object-fit: cover;
+    margin: 20px; /* 이미지 주변 마진을 20px로 설정 */
+    border-radius: 15px; /* 이미지 모서리를 둥글게 */
+}
+
+/* 좌우 슬라이드 버튼 위치 조정 */
+.slide-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.left-btn {
+    left: 10px;
+}
+
+.right-btn {
+    right: 10px;
+}

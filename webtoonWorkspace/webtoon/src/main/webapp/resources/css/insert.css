@@ -1,0 +1,150 @@
+body {
+  margin: 0;
+  padding: 1% 5%;
+  background-color: #f5f5f5;
+}
+
+#logo {
+  width: 150px;
+  height: 50px;
+  border: 1px solid black;
+  margin-top: 10px;
+}
+
+main {
+  padding: 5%;
+  margin-top: 1.5%;
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  gap: 20px;
+}
+
+.menu {
+  width: 90%;
+  padding: 20px;
+  background-color: #DCE8FF;
+  border-radius: 10px;
+}
+
+#my {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #87c1ff;
+  border: 1px solid #6895c5;
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+#insert_btn {
+  width: 170px;
+  height: 35px;
+  background-color: #6895c5;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#insert_btn:hover {
+  background-color: #405b78;
+}
+
+.menu_btn {
+  padding: 10px 0;
+  text-align: center;
+}
+
+.menu_btn a {
+  display: block;
+  padding: 10px;
+  background-color: #87c1ff;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.menu_btn a:hover {
+  background-color: #6895c5;
+}
+
+.list {
+  width: 100%;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #87c1ff;
+  border-radius: 10px;
+}
+
+#list_main {
+  width: 100%;
+  height: 100px;
+  font-size: 1.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-bottom: 2px solid #87c1ff;
+  margin-bottom: 20px;
+}
+
+.list .write {
+  background-color: rgb(245, 254, 255);
+  position: relative;
+  border-radius: 10px;
+  width: 100%;
+  height: 80%;
+}
+
+.select_box {
+  padding: 5% 0 0 5%;
+}
+#select_content{
+  background-color: #DCE8FF;
+  border-radius: 3px;
+  border: 1px solid #87c1ff;
+  color: #1d1966;
+}
+
+#title {
+  padding: 2% 0 0 5%;
+  font-size: 1.1rem;
+}
+#title_box {
+  margin-left: 3%;
+  width: 85%;
+}
+
+#content{
+  padding: 0 0 0 5%;
+  font-size: 1.1rem;
+}
+#content_box{
+  width: 91%;
+  height: 230px;
+  margin-top: 5px;
+  resize: none;
+  border-radius: 10px;
+}
+
+.regist {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.regist > .submit_btn {
+  width: 70px;
+  height: 30px;
+  background-color: #007BFF;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
