@@ -28,7 +28,7 @@
         <div class="select_box">
           <select id="select_content">
             <option value="notice">공지사항</option>
-            <option value="freeBoard">자유게시판</option>
+            <option value="freeBoard" selected>자유게시판</option>
           </select>
         </div>
         <form action="/webtoon/board/freeBoard/insert" method="post">
