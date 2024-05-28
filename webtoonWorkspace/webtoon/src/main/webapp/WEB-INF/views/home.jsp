@@ -24,7 +24,7 @@
         		<span>닉네임 : ${sessionScope.loginAdminVo.nick} </span>
         		<br>
         		<a onclick = "location.href = '/webtoon/admin/logout'">로그아웃</a>&nbsp;
-        	<a href="/webtoon/myPage">
+        	<a href="/webtoon/admin/mypage">
                 <img src="/webtoon/resources/img/icon/mypage.png" alt="마이페이지" style="height: 20px;">
             </a>      	
         	</div>
@@ -45,7 +45,7 @@
         	<div id="user-controls">
         		<span>닉네임 : ${sessionScope.loginMemberVo.nick} </span>
         		<br>
-        		<a onclick = "location.href = '/webtoon/member/logout'">로그아웃</a>&nbsp;
+        		<a onclick = "location.href = '/webtoon/admin/logout'">로그아웃</a>&nbsp;
         	<a href="/webtoon/myPage">
                 <img src="/webtoon/resources/img/icon/mypage.png" alt="마이페이지" style="height: 20px;">
             </a>      	
