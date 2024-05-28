@@ -12,7 +12,7 @@ import webtoon.member.vo.MemberVo;
 
 public class MemberService {
 	
-	private MemberDao dao;
+	private final MemberDao dao;
 	
 	public MemberService() {
 		this.dao = new MemberDao();
@@ -94,6 +94,18 @@ public class MemberService {
 		close(conn);
 		
 		return result;
+	}
+
+
+	public boolean idCheck(String id) throws Exception{
+		
+		//DAO 호출
+		Connection conn = getConnection();
+		int result = dao.idCheck(conn,id);
+				
+		close(conn);
+		
+		return result == 0;
 	}
 	
 }

@@ -1,19 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ include file="/WEB-INF/views/layout/util.jsp" %>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입</title>
+<%@ include file="/WEB-INF/views/layout/util.jsp" %>
     <link rel="stylesheet" href="/webtoon/resources/css/join.css">
-    <!-- <script src="/webtoon/resources/js/join.js"></script>  -->
+    <script src="/webtoon/resources/js/join.js?ver=idcheck"></script>
 </head>
 <body>
     <div class="container">
       <div id="mt-img">
-        <a href="/HTML/main.html" id="img1">
+        <a href="/webtoon/home" id="img1">
             <img src="/webtoon/resources/img/logo/loginIcon.png" id="moont">
         </a>
       </div>
@@ -22,8 +22,7 @@
                 <label for="text">아이디:</label>
                 <div id="button-in-input">
                   <input type="text" id="username" name="id"  placeholder="아이디를 입력 (8~20)" required>
-                  <button type="button" id="check-username">중복확인</button>
-                  <span id="username-error" class="error-message"></span>
+                  <button type="button" id="check-username" onclick="idCheck();">중복확인</button>
                 </div>
             </div>
             <div class="form-group">
