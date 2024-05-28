@@ -7,20 +7,59 @@
 	<insert id="freeBoard_insert">
 		INSERT INTO BOARD
 		(
-			NO
-			, WRITER_NO
-			, TITLE
-			, CONTENT
-			, HIT
+		NO
+		, WRITER_NO
+		, TITLE
+		, CONTENT
+		, HIT
 		)
 		VALUES
 		(
-			SEQ_BOARD_NO.NEXTVAL
-			, ${writer_no}
-			, #{title} 
-			, #{content} 
-			, ${hit}
+		SEQ_BOARD_NO.NEXTVAL
+		, ${writer_no}
+		, #{title}
+		, #{content}
+		, ${hit}
 		)
 	</insert>
+
+	<select id="freeBoard_list"
+		resultType="webtoon.freeBoard.vo.FreeBoardVo">
+		SELECT *
+		FROM
+		(
+		SELECT ROWNUM AS RNUM
+		, T.*
+		FROM
+		(
+		SELECT *
+		FROM BOARD B
+		JOIN MEMBER M
+		ON B.WRITER_NO = M.NO
+		WHERE B.DEL_YN = 'N'
+		ORDER BY B.NO DESC
+		) T )
+		WHERE RNUM BETWEEN ${startNum} AND ${endNum}
+	</select>
+
+	<select id="freeBoard_datail" resultType="webtoon.freeBoard.vo.FreeBoardVo">
+		SELECT
+		B.NO
+		, B.CONTENT
+		, M.NICK
+		, B.HIT
+		, B.ENROLL_DATE
+		FROM BOARD B
+		JOIN MEMBER M
+		ON B.WRITER_NO = M.NO
+		WHERE B.NO = ${no}
+		AND B.DEL_YN = 'N'
+	</select>
+	
+	<update id="freeBoard_hit">
+		UPDATE BOARD 
+		SET HIT = HIT+1 
+		WHERE NO = ${no} AND DEL_YN = 'N'
+	</update>
 
 </mapper>

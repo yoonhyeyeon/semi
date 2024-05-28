@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/CSS/insert.css">
+  <link rel="stylesheet" href="/webtoon/resources/css/insert.css">
   <script defer src="/JS/insert.js"></script>
   <title>글쓰기</title>
 </head>

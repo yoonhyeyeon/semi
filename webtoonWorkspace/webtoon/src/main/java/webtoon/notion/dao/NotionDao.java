@@ -17,9 +17,9 @@ import webtoon.notion.vo.PageVo;
 public class NotionDao {
 
 	// 게시글 작성
-	public int NotionInsert(SqlSession ss , NotionVo vo) throws Exception {
-		return ss.insert("BoardMapper.notion_insert" , vo);
-		
+	public int NotionInsert(SqlSession ss, NotionVo vo) throws Exception {
+		return ss.insert("BoardMapper.notion_insert", vo);
+
 //		String sql = "INSERT INTO NOTION (NO, WRITER_NO, TITLE, CONTENT, ENROLL_DATE, DEL_YN) VALUES (SEQ_NOTION_NO.NEXTVAL, ?, ?, ?, SYSDATE, 'N')";
 //		PreparedStatement pstmt = conn.prepareStatement(sql);
 //		pstmt.setString(1, vo.getWriter_no());
@@ -32,11 +32,11 @@ public class NotionDao {
 //		
 //		return result;
 	}
-	
+
 	// 게시글 목록 조회
-	public List<NotionVo> getNotionList(SqlSession ss, PageVo pvo) throws Exception{
-		return ss.selectList("BoardMapper.notion_list");
-		
+	public List<NotionVo> getNotionList(SqlSession ss, PageVo pvo) throws Exception {
+		return ss.selectList("BoardMapper.notion_list", pvo);
+
 //		String sql = "SELECT * FROM( SELECT ROWNUM AS RNUM , T.* FROM( SELECT * FROM NOTION N JOIN ADMIN A ON N.WRITER_NO = A.NO WHERE N.DEL_YN = 'N' ORDER BY N.NO DESC )T ) WHERE RNUM BETWEEN ? AND ?";
 //		PreparedStatement pstmt = conn.prepareStatement(sql);
 //		pstmt.setInt(1, pvo.getStartNum());
@@ -71,14 +71,31 @@ public class NotionDao {
 //		close(pstmt);
 //		close(rs);
 //		return voList;
-		
+
+	}
+
+	public int getNotionCnt(Connection conn) throws Exception {
+
+		String sql = "SELECT COUNT(*) FROM NOTION WHERE DEL_YN = 'N'";
+		PreparedStatement pstmt = conn.prepareStatement(sql);
+		ResultSet rs = pstmt.executeQuery();
+
+		int cnt = 0;
+		if (rs.next()) {
+			cnt = rs.getInt(1);
+		}
+
+		close(rs);
+		close(pstmt);
+
+		return cnt;
 	}
 
 	// 게시글 상세조회
 	public NotionVo getNotionByNo(SqlSession ss, String no) throws Exception {
-		
+
 		return ss.selectOne("BoardMapper.notion_detail", no);
-				
+
 //		String sql = "SELECT N.NO ,N.TITLE ,N.CONTENT ,A.NICK ,N.ENROLL_DATE FROM NOTION N JOIN ADMIN A ON N.WRITER_NO = A.NO WHERE N.NO = ? AND N.DEL_YN = 'N'";
 //		PreparedStatement pstmt = conn.prepareStatement(sql);
 //		pstmt.setString(1, no);
@@ -103,14 +120,14 @@ public class NotionDao {
 //		close(conn);
 //		close(pstmt);
 //		return vo;
-		
+
 	}
 
 	// 게시글 수정
 	public int edit(SqlSession ss, NotionVo vo) throws Exception {
-		
+
 		return ss.update("BoardMapper.notion_edit", vo);
-		
+
 //		String sql = "UPDATE NOTION SET TITLE = ? , CONTENT = ? WHERE NO = ?";
 //		PreparedStatement pstmt = conn.prepareStatement(sql);
 //		pstmt.setString(1, vo.getTitle());
@@ -126,9 +143,9 @@ public class NotionDao {
 
 	// 게시글 삭제
 	public int delete(SqlSession ss, NotionVo notionVo) throws Exception {
-		
+
 		return ss.update("BoardMapper.notion_delete", notionVo);
-		
+
 //		String sql = "UPDATE NOTION SET DEL_YN = 'Y' WHERE NO = ? AND WRITER_NO = ? AND DEL_YN = 'N'";
 //		PreparedStatement pstmt = conn.prepareStatement(sql);
 //		pstmt.setString(1, notionVo.getNo());
@@ -139,7 +156,7 @@ public class NotionDao {
 //		close(pstmt);
 //		
 //		return result;
-		
+
 	}
-	
-}//class
+
+}// class
