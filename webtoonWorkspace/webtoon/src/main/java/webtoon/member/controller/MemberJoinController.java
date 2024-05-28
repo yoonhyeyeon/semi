@@ -42,7 +42,7 @@ public class MemberJoinController extends HttpServlet{
 			MemberService ms = new MemberService();
 			int result = ms.memberJoin(vo);
 			
-			if(result ==1 ) {
+			if(result ==1) {
 				req.setAttribute("resultMsg", "회원가입 성공");
 			}else {
 				req.setAttribute("resultMsg", "회원가입 실패...");

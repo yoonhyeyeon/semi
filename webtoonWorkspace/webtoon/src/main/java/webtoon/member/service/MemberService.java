@@ -22,6 +22,12 @@ public class MemberService {
 	public int memberJoin(MemberVo vo) throws Exception{
 		//비즈니스로직
 		
+		//아이디 유효성 검사
+		if(vo.getId().length() >= 16 || vo.getId().length() <= 4) {
+			throw new Exception("아이디를 4~16자 이내로 작성해주세요");
+		}
+		
+		
 		//비밀번호 일치 여부
 		try {
 			if(!vo.getPwd().equals(vo.getPwd2())) {
@@ -29,7 +35,7 @@ public class MemberService {
 			}
 			
 		}catch(NullPointerException e) {
-			System.out.println("비밀번호가 없습니다");
+			System.out.println("아이디 또는 비밀번호가 없습니다");
 		}
 		
 		//DAO
@@ -49,6 +55,9 @@ public class MemberService {
 
 
 	public MemberVo login(MemberVo vo) throws Exception{
+		
+		
+		//Dao
 		Connection conn = getConnection();
 		MemberVo loginMemberVo = dao.login(conn,vo);
 		
@@ -59,6 +68,8 @@ public class MemberService {
 
 
 	public int quit(String no) throws Exception{
+		
+		
 		
 		
 		//DAO
