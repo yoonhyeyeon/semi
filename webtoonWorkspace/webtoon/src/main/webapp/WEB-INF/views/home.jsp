@@ -16,6 +16,30 @@
         <div id="logo">
             <img src="/webtoon/resources/img/logo/moontoon.png" alt="MoonToon Logo" style="height: 40px;">
         </div>
+        
+        
+        <c:choose>
+        	<c:when test="${ sessionScope.loginAdminVo != null}">
+        	<div id="user-controls">
+        		<span>닉네임 : ${sessionScope.loginAdminVo.nick} </span>
+        		<br>
+        		<a onclick = "location.href = '/webtoon/admin/logout'">로그아웃</a>&nbsp;
+        	<a href="/webtoon/myPage">
+                <img src="/webtoon/resources/img/icon/mypage.png" alt="마이페이지" style="height: 20px;">
+            </a>      	
+        	</div>
+        	</c:when>
+        	<c:otherwise>
+        <div id="user-controls">
+			<a href="/webtoon/admin/login">
+                <img hidden="" src="/webtoon/resources/img/icon/투명.png" alt="로그인" style="height: 20px;">
+            </a>
+        </div>
+        	</c:otherwise>
+        </c:choose>
+        
+        
+        
         <c:choose>
         	<c:when test="${ sessionScope.loginMemberVo != null}">
         	<div id="user-controls">
@@ -35,6 +59,10 @@
         </div>
         	</c:otherwise>
         </c:choose>
+        
+
+        
+        
     </header>
     <hr class="webtoon-hr">
     <div class="promotion">
