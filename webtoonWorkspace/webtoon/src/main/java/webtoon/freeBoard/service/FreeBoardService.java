@@ -81,5 +81,36 @@ public class FreeBoardService {
 		}
 		return vo;
 	}
+	public int edit(FreeBoardVo vo) throws Exception {
+		
+		SqlSession ss = getSqlSession();
+		int result = dao.edit(ss , vo);
+		
+		if( result == 1 ) {
+			ss.commit();
+		}else {
+			ss.rollback();
+		}
+		
+		ss.close();
+		
+		return result;
+	}
+	public int delete(FreeBoardVo boardVo) throws Exception {
+		
+		SqlSession ss = getSqlSession();
+		int result = dao.delete(ss , boardVo);
+		
+		if( result == 1 ) {
+			ss.commit();
+		}else {
+			ss.rollback();
+			throw new Exception("게시글 삭제 실패");
+		}
+		
+		ss.close();
+		
+		return result;
+	}
 
 }

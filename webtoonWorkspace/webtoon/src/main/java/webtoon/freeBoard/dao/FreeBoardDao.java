@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.List;
 
+import org.apache.ibatis.annotations.Update;
 import org.apache.ibatis.session.SqlSession;
 import static webtoon.db.JDBCTemplate.*;
 
@@ -53,6 +54,16 @@ public class FreeBoardDao {
 
 	public int increaseHit(SqlSession ss, String no) {
 		return ss.update("FreeBoardMapper.freeBoard_hit",no);
+	}
+
+	public int edit(SqlSession ss, FreeBoardVo vo) {
+		return ss.update("FreeBoardMapper.freeBoard_edit", vo);
+		
+	}
+
+	public int delete(SqlSession ss, FreeBoardVo boardVo) {
+		return ss.update("FreeBoardMapper.freeBoard_delete", boardVo);
+		
 	}
 
 	

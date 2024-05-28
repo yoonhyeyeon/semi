@@ -43,6 +43,7 @@
 	<select id="freeBoard_datail" resultType="webtoon.freeBoard.vo.FreeBoardVo">
 		SELECT
 		B.NO
+		, B.TITLE
 		, B.CONTENT
 		, M.NICK
 		, B.HIT
@@ -58,6 +59,21 @@
 		UPDATE BOARD 
 		SET HIT = HIT+1 
 		WHERE NO = ${no} AND DEL_YN = 'N'
+	</update>
+
+	<update id="freeBoard_edit">
+		UPDATE BOARD 
+		SET TITLE = #{title} 
+		, CONTENT = #{content}
+		WHERE NO = ${no}
+	</update>
+
+	<update id="freeBoard_delete">
+		UPDATE BOARD 
+		SET DEL_YN = 'Y' 
+		WHERE NO = #{no}
+		AND WRITER_NO = #{writer_no}
+		AND DEL_YN = 'N'
 	</update>
 
 </mapper>
