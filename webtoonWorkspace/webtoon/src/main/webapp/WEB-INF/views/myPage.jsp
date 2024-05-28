@@ -30,7 +30,7 @@
     <ul>
         <li><a href="#"><div class="icon"><img src="/webtoon/resources/icon/결제내역.png" alt="결제내역 아이콘"></div>결제내역</a></li>
         <hr>
-        <li><a href="../HTML/notion.html"><div class="icon"><img src="/webtoon/resources/icon/공지사항.png" alt="공지사항 아이콘"></div>공지사항</a></li>
+        <li><a href="/webtoon/board/notion/list"><div class="icon"><img src="/webtoon/resources/icon/공지사항.png" alt="공지사항 아이콘"></div>공지사항</a></li>
         <hr>
         <li><a href="/HTML/service_center.html"><div class="icon"><img src="/webtoon/resources/icon/고객센터.png" alt="고객센터 아이콘"></div>고객센터</a></li>
         <hr>
