@@ -11,18 +11,19 @@
     <script defer src="/webtoon/resources/js/admin.js"></script>
 </head>
 <body>
+	
     <div class="login-container">
       <div id="login-logo">
-       <a href="/webtoon/html/main.html"><img src="/resources/logo/loginIcon.png" alt="ADMINMOONTOON" id="main-logo"></a> 
+       <a href="/webtoon/html/main.html"><img src="/webtoon/resources/img/logo/loginIcon.png" alt="ADMINMOONTOON" id="main-logo"></a> 
       </div>
         <form action="/webtoon/admin/login" method="post">
             <div class="form-group">
                 <label for="username">관리자 아이디</label>
-                <input type="text" id="username" name="username" placeholder="아이디 입력" required>
+                <input type="text" id="username" name="id" placeholder="아이디 입력" required>
             </div>
             <div class="form-group">
                 <label for="password">비밀번호</label>
-                <input type="password" id="password" name="password" placeholder="비밀번호 입력" required>          
+                <input type="password" id="password" name="pwd" placeholder="비밀번호 입력" required>          
             </div>
             <br>
             <button type="submit">로그인</button>
@@ -31,7 +32,7 @@
         </form>
         <hr>
         <div class="signup-link">
-            관리자가 아니시군요?? <a href="/HTML/login.html">회원 로그인</a>
+            관리자가 아니시군요?? <a href="/webtoon/member/login">회원 로그인</a>
         </div>
         <br><br>
         <div id="last-pre">
