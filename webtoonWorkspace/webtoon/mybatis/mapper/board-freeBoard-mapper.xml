@@ -11,15 +11,13 @@
 		, WRITER_NO
 		, TITLE
 		, CONTENT
-		, HIT
 		)
 		VALUES
 		(
 		SEQ_BOARD_NO.NEXTVAL
-		, ${writer_no}
+		, #{writer_no}
 		, #{title}
 		, #{content}
-		, ${hit}
 		)
 	</insert>
 

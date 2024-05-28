@@ -27,7 +27,7 @@
       <div class="write">
         <div class="select_box">
           <select id="select_content">
-            <option value="notice">공지사항</option>
+            <option value="notice" selected>공지사항</option>
             <option value="freeBoard">자유게시판</option>
           </select>
         </div>

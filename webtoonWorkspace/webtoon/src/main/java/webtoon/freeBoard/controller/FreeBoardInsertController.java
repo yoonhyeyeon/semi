@@ -35,15 +35,14 @@ public class FreeBoardInsertController extends HttpServlet{
 			
 			String title = req.getParameter("title");
 			String content = req.getParameter("content");
-			String writer_no = req.getParameter("writer_no");
 
 			MemberVo loginMemberVo = (MemberVo) session.getAttribute("loginMemberVo");
-			String writerNo = loginMemberVo.getNo();
+			String writer_no = loginMemberVo.getNo();
 			
 			FreeBoardVo vo = new FreeBoardVo();
 			vo.setTitle(title);
 			vo.setContent(content);
-//			vo.setWriter_no(writer_no);
+			vo.setWriter_no(writer_no);
 
 			FreeBoardService bs = new FreeBoardService();
 			int result = bs.FreeBoardInsert(vo);
