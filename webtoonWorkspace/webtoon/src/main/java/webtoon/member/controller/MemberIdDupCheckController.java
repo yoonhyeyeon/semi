@@ -16,28 +16,28 @@ public class MemberIdDupCheckController extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		//try {
-			//String id =req.getParameter("id");
+		try {
+			String id =req.getParameter("id");
 			
-			/*MemberService ms = new MemberService();
-			//boolean isAvailable = ms.idCheck(id);
+			MemberService ms = new MemberService();
+			boolean isAvailable = ms.idCheck(id);
 			
 			if(!isAvailable) {
 				throw new Exception("중복검사 실패..");
 			}
-			resp.getWriter().write("good");
+			resp.getWriter().write("can");
 			
 		}catch(Exception e) {
 			e.printStackTrace();
+			resp.getWriter().write("cant");
 		}
-		}
-		
-	*/
 	}
+		
+
+	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		super.doPost(req, resp);
+		doPost(req, resp);
 	}
 
 }

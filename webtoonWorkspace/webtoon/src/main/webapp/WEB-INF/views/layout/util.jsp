@@ -3,11 +3,10 @@
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
 <link rel="stylesheet" href="/webtoon/resources/css/main.css">
-<script defer src="/webtoon/resources/js/main.js"></script>
-
+<script src="/webtoon/resources/js/home.js"></script> 
 <script>
 
 	<c:if test="${not empty alertMsg}">

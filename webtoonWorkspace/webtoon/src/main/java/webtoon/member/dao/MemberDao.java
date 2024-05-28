@@ -95,4 +95,22 @@ public class MemberDao {
 		
 		return result;
 	}
+
+	public int idCheck(Connection conn, String id) throws Exception{		
+		//SQl
+		String sql = "SELECT COUNT(*) AS CNT FROM MEMBER  WHERE ID = ?";
+		PreparedStatement pstmt = conn.prepareStatement(sql);
+		pstmt.setString(1, id);
+		ResultSet rs = pstmt.executeQuery();
+		
+		
+		int cnt = 1;
+		if(rs.next()) {
+			cnt = rs.getInt("CNT");
+		}
+		close(rs);
+		close(pstmt);
+		
+		return cnt;
+	}
 }
