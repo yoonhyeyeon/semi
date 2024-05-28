@@ -34,17 +34,14 @@ public class NotionInsertController extends HttpServlet {
 			
 			String title = req.getParameter("title");
 			String content = req.getParameter("content");
-			String writer_no = req.getParameter("writer_no");
 
 			AdminVo loginAdminVo = (AdminVo)session.getAttribute("loginAdminVo");
-			String writerNo = loginAdminVo.getNo();
+			String writer_no = loginAdminVo.getNo();
 			
 			NotionVo vo = new NotionVo();
 			vo.setTitle(title);
 			vo.setContent(content);
 			vo.setWriter_no(writer_no);
-			System.out.println(title);
-			System.out.println(content);
 
 			NotionService ns = new NotionService();
 			int result = ns.NotionInsert(vo);

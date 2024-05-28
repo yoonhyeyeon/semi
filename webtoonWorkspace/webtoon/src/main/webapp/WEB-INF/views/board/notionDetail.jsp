@@ -38,7 +38,7 @@
       <div id="content_in">${requestScope.vo.content}</div>
     </div>
     <br>
-    <c:if test="${requestScope.vo.writer_no == sessionScope.loginAdminVo.no}">
+    <c:if test="${requestScope.vo.nick == sessionScope.loginAdminVo.nick}">
 	    <div class="under">
 	      <button id="edit_btn" onclick="location.href='edit?no=${vo.no}'">수정</button>
 	      <button id="delete_btn" onclick="location.href='delete?no=${vo.no}'">삭제</button>

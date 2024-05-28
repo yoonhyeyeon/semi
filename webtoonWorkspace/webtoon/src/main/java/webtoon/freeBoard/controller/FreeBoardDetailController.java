@@ -12,7 +12,7 @@ import webtoon.freeBoard.service.FreeBoardService;
 import webtoon.freeBoard.vo.FreeBoardVo;
 import webtoon.member.vo.MemberVo;
 
-@WebServlet("/freeBoard/detail")
+@WebServlet("/board/freeBoard/detail")
 public class FreeBoardDetailController extends HttpServlet {
 
 	@Override

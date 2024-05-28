@@ -37,7 +37,7 @@
 		        <div class="list_num">
 		          <div id="num_side">${vo.no}</div>
 		          <div class="num_main"><a href="/webtoon/board/freeBoard/detail?no=${vo.no}">${vo.title}</a></div>
-		          <div class="num_main">${vo.nick}</div>
+		          <div class="num_main">😊${vo.nick}</div>
 		          <div id="num_end">${vo.enroll_date}</div>
 		          <div id="num_end2">${vo.hit}</div>
 		        </div>

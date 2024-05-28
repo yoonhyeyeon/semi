@@ -43,6 +43,8 @@ public class FreeBoardInsertController extends HttpServlet{
 			vo.setTitle(title);
 			vo.setContent(content);
 			vo.setWriter_no(writer_no);
+			System.out.println(title);
+			System.out.println(content);
 
 			FreeBoardService bs = new FreeBoardService();
 			int result = bs.FreeBoardInsert(vo);

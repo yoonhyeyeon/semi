@@ -14,11 +14,8 @@
 		<div class="menu">
 			<div id="my">
 				<div>${sessionScope.loginAdminVo.id}</div>
-				<%-- 아이디 가쟈오기 --%>
 				<div>${sessionScope.loginAdminVo.nick}</div>
-				<%-- 닉네임 가쟈오기 --%>
-				<div>${sessionScope.loginAdminVo.vipNo}</div>
-				<%-- 회원등급 가쟈오기 --%>
+				<div>${sessionScope.loginAdminVo.vip_no}</div>
 				<button id="insert_btn"
 					onclick="location.href='/webtoon/board/notion/insert'">글쓰기</button>
 			</div>
