@@ -59,14 +59,14 @@ public class AdminEditController extends HttpServlet{
 			if(result != 1) {
 				throw new Exception("관리자정보 수정 실패...");
 			}
-			session.setAttribute("alertMsg", "회원정보 수정 완료!");
-			session.removeAttribute("loginMemberVo");
+			session.setAttribute("alertMsg", "관리자정보 수정 완료!");
+			session.removeAttribute("loginAdminVo");
 			resp.sendRedirect("/webtoon/home");
 			
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 			e.printStackTrace();
-			req.setAttribute("errMsg", "회원정보 수정 중 에러 발생...");
+			req.setAttribute("errMsg", "관리자정보 수정 중 에러 발생...");
 			req.getRequestDispatcher("/WEB-INF/views/common/error.jsp").forward(req, resp);
 		}
 		
