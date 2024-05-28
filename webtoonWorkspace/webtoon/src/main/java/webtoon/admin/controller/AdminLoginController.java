@@ -12,6 +12,7 @@ import javax.servlet.http.HttpSession;
 import webtoon.admin.dao.AdminDao;
 import webtoon.admin.service.AdminService;
 import webtoon.admin.vo.AdminVo;
+import webtoon.member.vo.MemberVo;
 
 @WebServlet("/admin/login")
 public class AdminLoginController extends HttpServlet{
@@ -25,6 +26,10 @@ public class AdminLoginController extends HttpServlet{
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		try {
+			//세션
+			HttpSession session = req.getSession();
+			
+			//데이터 꺼내기
 			String id = req.getParameter("id");
 			String pwd = req.getParameter("pwd");
 			
@@ -32,28 +37,25 @@ public class AdminLoginController extends HttpServlet{
 			vo.setId(id);
 			vo.setPwd(pwd);
 			
-			
-			//서비스 
-			AdminDao adminDao = new AdminDao();
-			AdminService as = new AdminService(adminDao);
+			AdminService as = new AdminService();
 			AdminVo loginAdminVo = as.login(vo);
 			
-			//결과
-	        if (loginAdminVo == null) {
-	            req.setAttribute("alertMsg", "관리자 회원 로그인 실패...");
-	            req.getRequestDispatcher("/WEB-INF/views/admin/login.jsp").forward(req, resp);
-	        } else {
-	            HttpSession session = req.getSession();
-	            session.setAttribute("alertMsg", "관리자 회원 로그인 성공!");
-	            session.setAttribute("loginAdminVo", loginAdminVo);
-	            resp.sendRedirect("/webtoon/home");
-	        }
-	    } catch (Exception e) {
-	        e.printStackTrace();
+			if(loginAdminVo != null) {
+				session.setAttribute("alertMsg", "관리자 로그인 성공!!");
+				session.setAttribute("loginAdminVo", loginAdminVo);
+				System.out.println("로그인 성공");
+			}else {
+				session.setAttribute("alertMsg", "관리자 로그인 실패...");
+				System.out.println("로그인 실패: ID 또는 비밀번호 불일치 또는 계정이 삭제됨");
+			}
+			resp.sendRedirect("/webtoon/home");
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			req.setAttribute("errMsg", "[ERROR-M0002] 로그인 중 에러 발생 ...");
+			req.getRequestDispatcher("/WEB-INF/views/common/error.jsp").forward(req, resp);
+		}
 
-	    }
-		
-		
 		
 	}
 	
