@@ -18,9 +18,9 @@
         <div>${sessionScope.loginMemberVo.vip_no}</div>
         <button id="insert_btn" onclick="location.href='/webtoon/board/freeBoard/insert'">글쓰기</button>
       </div>
-      <div class="menu_btn"><a href="../HTML/webtoon.html">👆 웹툰</a></div>
+      <div class="menu_btn"><a href="/webtoon/home">👆 웹툰</a></div>
       <div class="menu_btn"><a href="/webtoon/board/notion/list">👆 공지사항</a></div>
-      <div class="menu_btn"><a href="/webtoon/board/freeboard/list">👆 자유게시판</a></div>
+      <div class="menu_btn"><a href="/webtoon/board/freeBoard/list">👆 자유게시판</a></div>
     </div>
     <div class="list">
       <div id="list_main">자유게시판</div>
