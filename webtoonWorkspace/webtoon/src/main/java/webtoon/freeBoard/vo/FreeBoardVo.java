@@ -10,9 +10,10 @@ public class FreeBoardVo {
 	private String enroll_date;
 	private String modify_date;
 	private String del_yn;
+	private String nick;
 	
 	public FreeBoardVo(String no, String writer_no, String title, String content, String hit, String enroll_date,
-			String modify_date, String del_yn) {
+			String modify_date, String del_yn, String nick) {
 		super();
 		this.no = no;
 		this.writer_no = writer_no;
@@ -22,6 +23,7 @@ public class FreeBoardVo {
 		this.enroll_date = enroll_date;
 		this.modify_date = modify_date;
 		this.del_yn = del_yn;
+		this.nick = nick;
 	}
 	public FreeBoardVo() {
 		super();
@@ -75,13 +77,18 @@ public class FreeBoardVo {
 	public void setDel_yn(String del_yn) {
 		this.del_yn = del_yn;
 	}
+	public String getNick() {
+		return nick;
+	}
+	public void setNick(String nick) {
+		this.nick = nick;
+	}
 	@Override
 	public String toString() {
 		return "FreeBoardVo [no=" + no + ", writer_no=" + writer_no + ", title=" + title + ", content=" + content
 				+ ", hit=" + hit + ", enroll_date=" + enroll_date + ", modify_date=" + modify_date + ", del_yn="
-				+ del_yn + "]";
+				+ del_yn + ", nick=" + nick + "]";
 	}
-	
 	
 	
 }

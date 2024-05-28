@@ -27,11 +27,13 @@ public class NotionListController extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
 		try {
+			
+			int listCount = ns.getNotionCnt();
 			String x = req.getParameter("pno") == null ? "1" : req.getParameter("pno");
 			int currentPage = Integer.parseInt(x);
 			int pageLimit = 5;
 			int boardLimit = 10;
-			PageVo pvo = new PageVo(boardLimit, currentPage, pageLimit, boardLimit);
+			PageVo pvo = new PageVo(listCount, currentPage, pageLimit, boardLimit);
 			
 			List<NotionVo> voList = ns.getNotionList(pvo);
 

@@ -21,14 +21,22 @@
 		)
 	</insert>
 
-	<select id="notion_list"
-		resultType="webtoon.notion.vo.NotionVo">
-		SELECT *
-		FROM NOTION N
-		JOIN ADMIN A
-		ON N.WRITER_NO = A.NO
-		WHERE N.DEL_YN = 'N'
-		ORDER BY N.NO DESC
+	<select id="notion_list" resultType="webtoon.notion.vo.NotionVo">
+		SELECT * 
+		FROM
+		(
+		     SELECT ROWNUM AS RNUM 
+		     , T.*
+		FROM
+		(
+		     SELECT * 
+		     FROM NOTION N 
+		     JOIN ADMIN A 
+		     ON N.WRITER_NO = A.NO 
+		     WHERE N.DEL_YN = 'N' 
+		     ORDER BY N.NO DESC 
+		)T ) 
+		WHERE RNUM BETWEEN ${startNum} AND ${endNum}
 	</select>
 
 	<select id="notion_detail" resultType="webtoon.notion.vo.NotionVo">

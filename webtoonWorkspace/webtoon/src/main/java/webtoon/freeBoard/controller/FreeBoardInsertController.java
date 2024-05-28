@@ -11,6 +11,7 @@ import javax.servlet.http.HttpSession;
 
 import webtoon.freeBoard.service.FreeBoardService;
 import webtoon.freeBoard.vo.FreeBoardVo;
+import webtoon.member.vo.MemberVo;
 
 @WebServlet("/board/freeBoard/insert")
 public class FreeBoardInsertController extends HttpServlet{
@@ -34,10 +35,10 @@ public class FreeBoardInsertController extends HttpServlet{
 			
 			String title = req.getParameter("title");
 			String content = req.getParameter("content");
-//			String writer_no = req.getParameter("writer_no");
+			String writer_no = req.getParameter("writer_no");
 
-//			MemberVo loginMemberVo = (Membervo)session.getAttribute("loginMemberVo");
-//			String writerNo = loginMemberVo.getNo();
+			MemberVo loginMemberVo = (MemberVo) session.getAttribute("loginMemberVo");
+			String writerNo = loginMemberVo.getNo();
 			
 			FreeBoardVo vo = new FreeBoardVo();
 			vo.setTitle(title);

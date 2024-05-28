@@ -37,6 +37,7 @@ body {
     gap: 10px;
     justify-content: center;
     align-items: center;
+    text-align: center;
   }
   
   #insert_btn {
@@ -96,7 +97,7 @@ body {
   .list_detail{
     margin: 0;
     display: grid;
-    grid-template-columns: 1fr 4fr 4fr 4fr;
+    grid-template-columns: 1fr 4fr 4fr 4fr 4fr;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -111,7 +112,7 @@ body {
     margin: 0;
     height: 45px;
     display: grid;
-    grid-template-columns: 1fr 4fr 4fr 4fr;
+    grid-template-columns: 1fr 4fr 4fr 4fr 4fr;
   }
   
   #num_side {
@@ -123,6 +124,13 @@ body {
   }
   
   #num_end {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid lightgrey;
+    border-right: 1px solid lightgrey;
+  }
+  #num_end2 {
     display: flex;
     justify-content: center;
     align-items: center;
