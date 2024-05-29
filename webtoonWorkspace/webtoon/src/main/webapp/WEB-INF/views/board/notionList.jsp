@@ -7,6 +7,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/webtoon/resources/css/notion.css">
+  <script defer src="/webtoon/resources/js/notion_list.js"></script>
   <title>공지사항</title>
 </head>
 <body>
@@ -16,7 +17,7 @@
         <div>${sessionScope.loginAdminVo.id}</div>
         <div>${sessionScope.loginAdminVo.nick}</div>
         <div>${sessionScope.loginAdminVo.no}</div>
-        <button id="insert_btn" onclick="location.href='/webtoon/board/notion/insert'">글쓰기</button>
+        <button id="insert_btn">글쓰기</button>
       </div>
       <div class="menu_btn"><a href="/webtoon/home">👆 웹툰</a></div>
       <div class="menu_btn"><a href="/webtoon/board/notion/list">👆 공지사항</a></div>
