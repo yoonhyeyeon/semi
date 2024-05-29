@@ -19,10 +19,8 @@
             <button id="search-button">| 🔍</button>
         </div>
         <div id="user-controls">
-            <a href="/HTML/login.html">
-                <img src="/webtoon/resources/img/icon/고객센터.png" alt="로그인" style="height: 20px;">
-            </a>
-            <a href="/HTML/myPage.html"> 
+
+            <a href="/webtoon/myPage"> 
                 <img src="/webtoon/resources/img/icon/mypage.png" alt="마이페이지" style="height: 20px;">
             </a>
         </div>

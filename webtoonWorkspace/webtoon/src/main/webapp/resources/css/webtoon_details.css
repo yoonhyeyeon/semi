@@ -137,6 +137,10 @@ main {
     font-weight: bold;
 }
 
+#webtoon-title a {
+	text-decoration: none;
+}
+
 #webtoon-links button {
     background: none;
     color: #000;
