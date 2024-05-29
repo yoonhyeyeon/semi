@@ -19,5 +19,6 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	<mapper resource="/mapper/board-freeBoard-mapper.xml"/>
 	<mapper resource="/mapper/board-notion-mapper.xml"/>
 	<mapper resource="/mapper/admin-mapper.xml"/>
+	<mapper resource="/mapper/chat-mapper.xml"/>
 </mappers>
 </configuration>
