@@ -37,7 +37,7 @@
                <h2>총 6화</h2> 
             </div>
             <hr> <!-- 여기에 구분선 추가 -->
-            <a href="/HTML/webtoon_details.html">
+            <a href="/webtoon/details">
                 <div class="episode">
                     <img src="/webtoon/resources/img/episode/m01.jpg" alt="1화 이미지" class="episode-img">
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -49,7 +49,7 @@
             </a>
 
             <hr> <!-- 여기에 구분선 추가 -->
-            <a href="/HTML/webtoon_details.html">
+            <a href="/webtoon/details">
                 <div class="episode">
                     <img src="/webtoon/resources/img/episode/m02.jpg" alt="1화 이미지" class="episode-img">
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -61,7 +61,7 @@
             </a>
             
             <hr> <!-- 여기에 구분선 추가 -->
-            <a href="/HTML/webtoon_details.html">
+            <a href="/webtoon/details">
                 <div class="episode">
                     <img src="/webtoon/resources/img/episode/m03.jpg" alt="1화 이미지" class="episode-img">
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -73,7 +73,7 @@
             </a>
            
             <hr> <!-- 여기에 구분선 추가 -->
-            <a href="/HTML/webtoon_details.html">
+            <a href="/webtoon/details">
                 <div class="episode">
                     <img src="/webtoon/resources/img/episode/m04.jpg" alt="1화 이미지" class="episode-img">
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -85,7 +85,7 @@
             </a>
            
             <hr> <!-- 여기에 구분선 추가 -->
-            <a href="/HTML/webtoon_details.html">
+            <a href="/webtoon/details">
                 <div class="episode">
                     <img src="/webtoon/resources/img/episode/m05.jpg" alt="1화 이미지" class="episode-img">
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -97,7 +97,7 @@
             </a>
 
             <hr> <!-- 여기에 구분선 추가 -->
-            <a href="/HTML/webtoon_details.html">
+            <a href="/webtoon/details">
                 <div class="episode">
                     <img src="/webtoon/resources/img/episode/m06.jpg" alt="1화 이미지" class="episode-img">
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
