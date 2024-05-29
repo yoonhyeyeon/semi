@@ -15,7 +15,7 @@
 			<div id="my">
 				<div>${sessionScope.loginAdminVo.id}</div>
 				<div>${sessionScope.loginAdminVo.nick}</div>
-				<div>${sessionScope.loginAdminVo.vip_no}</div>
+				<div>${sessionScope.loginAdminVo.no}</div>
 				<button id="insert_btn"
 					onclick="location.href='/webtoon/board/notion/insert'">글쓰기</button>
 			</div>
