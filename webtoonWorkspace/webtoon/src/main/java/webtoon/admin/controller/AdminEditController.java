@@ -26,7 +26,7 @@ public class AdminEditController extends HttpServlet{
 			if(loginAdminVo == null) {
 				throw new Exception("관리자 로그인 후 이용해주세요.");
 			}
-			req.getRequestDispatcher("WEB-INF/views/admin/edit.jsp").forward(req, resp);
+			req.getRequestDispatcher("/WEB-INF/views/admin/edit.jsp").forward(req, resp);
 			
 		} catch (Exception e) {
 			e.printStackTrace();
