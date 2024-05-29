@@ -49,6 +49,7 @@ public class AdminDao {
 		pstmt.setString(3, vo.getNo());
 		int result = pstmt.executeUpdate();
 		
+		JDBCTemplate.close(pstmt);
 		return result;
 		
 		

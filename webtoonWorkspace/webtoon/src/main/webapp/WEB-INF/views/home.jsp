@@ -18,47 +18,39 @@
         </div>
         
         
-        <c:choose>
-        	<c:when test="${ sessionScope.loginAdminVo != null}">
-        	<div id="user-controls">
-        		<span>닉네임 : ${sessionScope.loginAdminVo.nick} </span>
-        		<br>
-        		<a onclick = "location.href = '/webtoon/admin/logout'">로그아웃</a>&nbsp;
-        	<a href="/webtoon/admin/mypage">
-                <img src="/webtoon/resources/img/icon/mypage.png" alt="마이페이지" style="height: 20px;">
-            </a>      	
-        	</div>
-        	</c:when>
-        	<c:otherwise>
-        <div id="user-controls">
-			<a href="/webtoon/admin/login">
-                <img hidden="" src="/webtoon/resources/img/icon/투명.png" alt="로그인" style="height: 20px;">
+<c:choose>
+    <c:when test="${not empty sessionScope.loginAdminVo}">
+        <!-- 관리자 로그인 시 보여줄 내용 -->
+        <div id="admin-controls">
+            관리자: ${sessionScope.loginAdminVo.nick} <br>
+            <a onclick="location.href='/webtoon/admin/logout'">로그아웃</a>&nbsp;
+            <a href="/webtoon/admin/mypage">
+                <img src="/webtoon/resources/img/icon/mypagelast.png" alt="마이페이지" style="height: 20px;">
             </a>
         </div>
-        	</c:otherwise>
-        </c:choose>
-        
-        
-        
-        <c:choose>
-        	<c:when test="${ sessionScope.loginMemberVo != null}">
-        	<div id="user-controls">
-        		<span>닉네임 : ${sessionScope.loginMemberVo.nick} </span>
-        		<br>
-        		<a onclick = "location.href = '/webtoon/admin/logout'">로그아웃</a>&nbsp;
-        	<a href="/webtoon/myPage">
-                <img src="/webtoon/resources/img/icon/mypage.png" alt="마이페이지" style="height: 20px;">
-            </a>      	
-        	</div>
-        	</c:when>
-        	<c:otherwise>
+    </c:when>
+    <c:when test="${not empty sessionScope.loginMemberVo}">
+        <!-- 일반 회원 로그인 시 보여줄 내용 -->
         <div id="user-controls">
+            닉네임 : ${sessionScope.loginMemberVo.nick} <br>
+            <a onclick="location.href='/webtoon/member/logout'">로그아웃</a>&nbsp;
+            <a href="/webtoon/myPage">
+                <img src="/webtoon/resources/img/icon/mypagelast.png" alt="마이페이지" style="height: 20px;">
+            </a>
+        </div>
+    </c:when>
+    <c:otherwise>
+        <!-- 아무도 로그인하지 않은 경우 보여줄 내용 -->
+        <div id="user-controls">
+            <a href="/webtoon/admin/login">
+                <img src="/webtoon/resources/img/icon/admin.png" alt="로그인" style="height: 20px;">
+            </a>
             <a href="/webtoon/member/login">
                 <img src="/webtoon/resources/img/icon/고객센터.png" alt="로그인" style="height: 20px;">
             </a>
         </div>
-        	</c:otherwise>
-        </c:choose>
+    </c:otherwise>
+</c:choose>
         
 
         
