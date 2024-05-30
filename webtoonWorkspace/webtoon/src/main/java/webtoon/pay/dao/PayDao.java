@@ -2,6 +2,9 @@ package webtoon.pay.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+
+import oracle.jdbc.proxy.annotation.Pre;
+import webtoon.member.vo.MemberVo;
 import webtoon.pay.vo.PayAddVo;
 import static webtoon.db.JDBCTemplate.*;
 
@@ -21,6 +24,34 @@ public class PayDao {
 		
 		return result;
 		
+	}
+
+	public int pay(Connection conn, MemberVo loginMembervo) throws Exception{
+		
+		//sql
+		String sql = "UPDATE MEMBER SET MCOIN = ? WHERE NO = ?";
+		PreparedStatement pstmt = conn.prepareStatement(sql);
+		pstmt.setInt(1, loginMembervo.getMcoin());
+		pstmt.setString(2, loginMembervo.getNo());
+		int result = pstmt.executeUpdate();
+		
+		close(pstmt);
+		
+		return result;
+	}
+
+	public int payUpdate(Connection conn, MemberVo loginMembervo) throws Exception{
+		
+		String sql ="SELECT MCOIN FROM MEMBER WHERE NO = ?";
+		PreparedStatement pstmt = conn.prepareStatement(sql);
+		pstmt.setString(1, loginMembervo.getNo());
+		int result = pstmt.executeUpdate();
+		
+		close(pstmt);
+		
+		return result;
+		
+				
 	}
 
 }

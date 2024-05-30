@@ -38,9 +38,9 @@ public class MemberDao {
 		
 		if(rs.next()) {
 			String no = rs.getString("NO");
-			String vip_no = rs.getString("VIP_NO");
-			String mcoin = rs.getString("MCOIN");
-			String pay_total = rs.getString("PAY_TOTAL");
+			int vip_no = rs.getInt("VIP_NO");
+			int mcoin = rs.getInt("MCOIN");
+			int pay_total = rs.getInt("PAY_TOTAL");
 			String id = rs.getString("ID");
 			String pwd = rs.getString("PWD");
 			String nick = rs.getString("NICK");
