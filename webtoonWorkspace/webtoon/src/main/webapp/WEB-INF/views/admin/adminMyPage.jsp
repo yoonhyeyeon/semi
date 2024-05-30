@@ -33,6 +33,8 @@
         <hr>
         <li><a href="/HTML/service_center.html"><div class="icon"><img src="/webtoon/resources/img/icon/고객센터.png" alt="고객센터 아이콘"></div>고객센터 수정</a></li>
         <hr>
+        <li><a href="/webtoon/webtoon/insert"><div class="icon"><img src="/webtoon/resources/img/icon/쿠폰등록.png" alt="쿠폰등록 아이콘"></div>웹툰 등록</a></li>
+        <hr>
         <li><a href="#"><div class="icon"><img src="/webtoon/resources/img/icon/쿠폰등록.png" alt="쿠폰등록 아이콘"></div>쿠폰 제작 및 등록</a></li>
         <hr>
         <li><a href="/webtoon/admin/quit"><div class="icon"><img class="icon01" src="/webtoon/resources/img/icon/회원탈퇴.png" alt="회원탈퇴 아이콘"></div>관리자 삭제</a></li>
