@@ -24,7 +24,7 @@
     </div>
     <hr>
     <div class="coin-box">
-        <span>보유 M코인: 100000 <img id="icon02" src="/webtoon/resources/img/icon/동전.png" alt=""></span>
+        <span>보유 M코인: ${sessionScope.loginMemberVo.mcoin} <img id="icon02" src="/webtoon/resources/img/icon/동전.png" alt=""></span>
     </div>
     <hr>
     <ul>

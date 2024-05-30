@@ -3,9 +3,9 @@ package webtoon.member.vo;
 public class MemberVo {
 	
 	private String no;
-	private String vip_no;
-	private String mcoin;
-	private String pay_total;
+	private int vip_no;
+	private int mcoin;
+	private int pay_total;
 	private String id;
 	private String pwd;
 	private String pwd2;
@@ -20,9 +20,8 @@ public class MemberVo {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public MemberVo(String no, String vip_no, String mcoin, String pay_total, String id, String pwd, String pwd2,
-			String nick, String address, String phone, String interested_yn, String enroll_date, String modify_date,
-			String del_yn) {
+	public MemberVo(String no, int vip_no, int mcoin, int pay_total, String id, String pwd, String pwd2, String nick,
+			String address, String phone, String interested_yn, String enroll_date, String modify_date, String del_yn) {
 		super();
 		this.no = no;
 		this.vip_no = vip_no;
@@ -45,22 +44,22 @@ public class MemberVo {
 	public void setNo(String no) {
 		this.no = no;
 	}
-	public String getVip_no() {
+	public int getVip_no() {
 		return vip_no;
 	}
-	public void setVip_no(String vip_no) {
+	public void setVip_no(int vip_no) {
 		this.vip_no = vip_no;
 	}
-	public String getMcoin() {
+	public int getMcoin() {
 		return mcoin;
 	}
-	public void setMcoin(String mcoin) {
+	public void setMcoin(int mcoin) {
 		this.mcoin = mcoin;
 	}
-	public String getPay_total() {
+	public int getPay_total() {
 		return pay_total;
 	}
-	public void setPay_total(String pay_total) {
+	public void setPay_total(int pay_total) {
 		this.pay_total = pay_total;
 	}
 	public String getId() {
@@ -130,6 +129,6 @@ public class MemberVo {
 				+ phone + ", interested_yn=" + interested_yn + ", enroll_date=" + enroll_date + ", modify_date="
 				+ modify_date + ", del_yn=" + del_yn + "]";
 	}
-	
+
 	
 }
