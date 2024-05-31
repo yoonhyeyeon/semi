@@ -16,20 +16,17 @@
         <div id="logo">
            <a href="/webtoon/home"><img src="/webtoon/resources/img/logo/moonlogo.png" alt="MoonToon Logo" style="height: 40px;"></a> 
         </div>
-        <div class="search-container">
-            <input type="text" id="search-bar" placeholder="검색">
-            <button id="search-button">| 🔍</button>
-        </div>
+  
         <div id="user-controls">
 
-            <a href="/webtoon/myPage"> 
-                <img src="/webtoon/resources/img/icon/mypage.png" alt="마이페이지" style="height: 20px;">
+            <a href="/webtoon/admin/mypage"> 
+                <img src="/webtoon/resources/img/icon/admin.png" alt="마이페이지" style="height: 20px;">
             </a>
         </div>
     </header>
     <hr class="webtoon-hr">
     <div id="webtoon-navigation">
-        <div id="webtoon-title"><a href="/webtoon/episode">화산귀환</a> | 1화</div>
+        <div id="webtoon-title"><a href="/webtoon/episode">화산귀환</a> | 관리자 업로드</div>
         <div id="webtoon-links">
         <form action="/webtoon/webtoon/insert" method="post" enctype="multipart/form-data">
 	        <input type="file" name="f" multiple>

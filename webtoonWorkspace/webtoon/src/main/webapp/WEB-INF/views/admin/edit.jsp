@@ -18,13 +18,13 @@
         	<input type="hidden" name="no" value="${sessionScope.loginAdminVo.no}">
         	
         	<div class="form-group">
-            	<label for="name">아이디:</label>
+            	<label for="name">관리자 아이디: </label>
             	<input type="text" id="nick" name="nick" placeholder="아이디" readonly value="${sessionScope.loginAdminVo.id}" required>
         	</div>
         	
         	<div class="form-group">
-            	<label for="name">변경할 닉네임 (변경을 권하지 않습니다.)</label>
-            	<input type="text" id="nick" name="nick" placeholder="닉네임" required>
+            	<label for="name">닉네임: </label>
+            	<input type="text" id="nick" name="nick" placeholder="닉네임" readonly value="${sessionScope.loginAdminVo.nick}" required>
         	</div>
         	
         	
