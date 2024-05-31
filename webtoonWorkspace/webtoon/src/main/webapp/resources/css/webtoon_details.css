@@ -153,3 +153,85 @@ main {
 #webtoon-links button:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
+
+
+/*------------------------------------------------------------------ */
+
+textarea[name="content"] {
+  width: 98%;
+  height: 200px;
+  border-radius: 10px;
+  border: 1px solid #98a2ac;
+  background-color: #dcedff;
+  font-size: 16px;
+  resize: none;
+  padding: 1%;
+}
+
+.do {
+  width: 80px;
+  height: 40px;
+  padding: 0;
+  border-radius: 8px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  float: right;
+  cursor: pointer;
+  position: relative;
+  top: 10px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#webtoon_foot{
+  margin: 20px 0px;
+}
+
+.comment {
+  padding: 15px 0px;
+  width: 98%;
+}
+
+.best {
+  width: 30px;
+  height: 14px;
+  color: white;
+  background-color: rgb(255, 46, 46);
+  border-radius: 10px;
+  border: none;
+  display: flex;
+  padding: 5px 10px;
+  margin-right: 10px;
+  font-size: 12px;
+}
+
+.day {
+  font-size: 0.9rem;
+}
+
+.good {
+  width: 50px;
+  height: 25px;
+  background-color: #dcedff;
+  border: 1px solid #98a2ac;
+  border-radius: 10px;
+  cursor: pointer;
+  float: right;
+}
+
+.nick {
+  width: 7%;
+  text-align: start;
+}
+
+.chat_btn{
+  background-color: white;
+  border: none;
+  font-size: 1.0rem;
+  cursor: pointer;
+}
