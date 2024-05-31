@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ChatMapper">
+	
+	<insert id="chatWirte">
+		INSERT INTO CHAT 
+		(
+		    NO
+		    , REF_EPISODE_NO
+		    , MEMBER_NO
+		    , CONTENT
+		) 
+		VALUES
+		(
+		    SEQ_CHAT_NO.NEXTVAL
+		    , ${refEpisodeNo}
+		    , ${memberNo}
+		    , #{content}
+		)
+	</insert>
+	
+	<select id="chatList" resultType="webtoon.chat.vo.ChatVo">
+		SELECT
+		    C.CONTENT
+		    , M.NICK
+		    , C.ENROLL_DATE
+		    , C.HIT
+		FROM CHAT C
+		JOIN MEMBER M ON C.MEMBER_NO = M.NO
+		WHERE C.REF_EPISODE_NO = #{refEpisodeNo}
+		AND C.DEL_YN = 'N'
+		ORDER BY C.HIT DESC
+	</select>
+
+	<select id="getChat" resultType="webtoon.chat.vo.ChatVo">
+	  SELECT *
+	  FROM CHAT
+	</select>
+
+</mapper>
+

@@ -8,6 +8,9 @@
     <title>webtoonDetails</title>
     <link rel="stylesheet" href="/webtoon/resources/css/webtoon_details.css">
     <script defer src="/webtoon/resources/js/webtoon_details.js"></script>
+    
+    <%@ include file="/WEB-INF/views/layout/util.jsp" %>
+    
 </head>
 <body>
     <header>
@@ -29,6 +32,8 @@
     <div id="webtoon-navigation">
         <div id="webtoon-title"><a href="/webtoon/episode">화산귀환</a> | 1화</div>
         <div id="webtoon-links">
+        	<a href=".clearfix" id="scroll_move">댓글 목록</a>
+        	&nbsp;|
             <button>이전화</button>
             &nbsp;|
             <button>목록</button>
@@ -84,8 +89,45 @@
             <img src="/webtoon/resources/img/episode/ep042.jpeg" alt="Image 2">
             <img src="/webtoon/resources/img/episode/ep043.jpeg" alt="Image 2">
             <img src="/webtoon/resources/img/episode/ep044.jpeg" alt="Image 2">
-
         </div>
+         <br><br><br>
+        <div class="clearfix" id="scroll_move">
+			<c:choose>
+				<c:when test="${not empty sessionScope.loginMemberVo}">
+				    <textarea name="content" id="commentText" placeholder="댓글을 입력해주세요."></textarea>
+		  			<br>
+		  			<h1>@@@@@@@@@@@@@@@@@@@ ${vo}</h1>
+		    		<button class="do" onclick="Chatwrite(${vo.no});">등록</button>
+				</c:when>
+				<c:otherwise>
+				    <textarea name="content" id="commentText" placeholder="로그인 시 이용가능 합니다."></textarea>
+				    <br>
+				    <br>
+				</c:otherwise>
+			</c:choose>
+       </div>
+      <br>
+      <br>
+      <hr>
+      <div class="chat">
+        <button class="chat_btn" onclick="ChatLoad(${vo.no});">베스트 댓글</button> | <button class="chat_btn">전체 댓글</button>
+      </div>
+      <br>
+      <div class="main_chat" id="commentSection">
+        <br>
+        <span class="best">BEST</span>
+       		<div class = chat_box>
+	 <!--       <div class="comment-container">
+	          <div class="comment">
+	              <strong>문태웅</strong> | 내가 조장이야
+	           </div>
+	          <span class="day">2024-05-16 22:07</span>
+	          <button class="good">👍</button>
+	       	 </div>
+	        <hr id="webtoon_foot"> --> 
+       	   </div>
+      </div>
+      <br><br><br>
     </main>
 </body>
 </html>
