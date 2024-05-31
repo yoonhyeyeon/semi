@@ -79,3 +79,19 @@ body {
 .pay a {
     text-decoration: none;
 }
+
+
+input:focus{
+    outline: none;
+}
+
+#priceBest,
+#price10,
+#price50,
+#price100,
+#price500,
+#price1000{
+   border-width: 0px;
+   text-align: right;
+   font-size: 1.2em;
+}
