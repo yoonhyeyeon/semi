@@ -41,13 +41,7 @@
 
 	
     <main>
-    <div id="image-gallery">
-        <c:forEach items="${uploadedImages}" var="image">
-            <div class="image-item">
-                <img src="/webtoon/resources/uploads/${image.changeName}" alt="${image.originName}">
-            </div>
-        </c:forEach>
-    </div>
-</main>
+
+	</main>
 </body>
 </html>

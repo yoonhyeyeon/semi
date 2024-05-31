@@ -34,20 +34,20 @@ public class WebtoonInsertController extends HttpServlet{
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
-		try {
-			WebtoonService ws = new WebtoonService();
-			List<CategoryVo> categoryVoList = ws.getCategoryVoList();
-			
-			req.setAttribute("categoryVoList", categoryVoList);
-			req.getRequestDispatcher("/WEB-INF/views/webtoon/insert.jsp").forward(req, resp);
-		} catch (Exception e) {
-			System.out.println(e.getMessage());
-			e.printStackTrace();
-			req.setAttribute("errMsg", e.getMessage());
-			req.getRequestDispatcher("/WEB-INF/views/common/error.jsp").forward(req, resp);
-		}
-		
+	    try {
+	        WebtoonService ws = new WebtoonService();
+	        String webtoonNo = req.getParameter("webtoonNo"); // 웹툰 번호를 요청 파라미터에서 가져옴
+	        List<AttachmentVo> attachments = ws.getAttachment(webtoonNo); // 특정 웹툰의 이미지 목록을 가져옴
+	        req.setAttribute("uploadedImages", attachments); // 요청 객체에 이미지 목록을 속성으로 추가
+
+	        List<CategoryVo> categoryVoList = ws.getCategoryVoList();
+	        req.setAttribute("categoryVoList", categoryVoList); // 카테고리 정보도 함께 전달
+	        req.getRequestDispatcher("/WEB-INF/views/webtoon/insert.jsp").forward(req, resp);
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	        req.setAttribute("errMsg", e.getMessage());
+	        req.getRequestDispatcher("/WEB-INF/views/common/error.jsp").forward(req, resp);
+	    }
 	}
 	
 	@Override
@@ -84,7 +84,7 @@ public class WebtoonInsertController extends HttpServlet{
 			if(result < 1) {
 				throw new Exception("사진 업로드 실패 ...!!!");
 			}
-			resp.sendRedirect("/webtoon/webtoon/insert");
+			resp.sendRedirect("/webtoon/webtoon/display");
 		} catch (Exception e) {
 			e.printStackTrace();
 			req.setAttribute("errMsg", e.getMessage());

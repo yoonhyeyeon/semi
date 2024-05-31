@@ -67,6 +67,27 @@ public class WebtoonDao {
 		
 	}//METHOD
 
+	public List<AttachmentVo> getAllAttachments(Connection conn) throws SQLException {
+	    List<AttachmentVo> attachments = new ArrayList<>();
+	    // 'attachment' 대신 'WEBTOON_ATTACHMENT' 테이블을 참조해야 합니다.
+	    String sql = "SELECT * FROM WEBTOON_ATTACHMENT";
+	    PreparedStatement pstmt = conn.prepareStatement(sql);
+	    ResultSet rs = pstmt.executeQuery();
+	    
+	    while (rs.next()) {
+	        AttachmentVo vo = new AttachmentVo();
+	        // 각 컬럼에 맞는 데이터를 설정합니다.
+	        vo.setOriginName(rs.getString("origin_name"));
+	        vo.setChangeName(rs.getString("change_name"));
+	        // 추가적인 필드에 대한 설정이 필요할 수 있습니다.
+	        attachments.add(vo);
+	    }
+	    rs.close();
+	    pstmt.close();
+
+	    return attachments;
+	}
+
 
 	
 }//class

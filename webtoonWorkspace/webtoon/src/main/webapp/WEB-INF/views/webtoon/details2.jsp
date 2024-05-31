@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
     
 <!DOCTYPE html>
 <html lang="ko">
@@ -7,6 +8,7 @@
     <meta charset="UTF-8">
     <title>webtoonDetails</title>
     <link rel="stylesheet" href="/webtoon/resources/css/webtoon_details.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script defer src="/webtoon/resources/js/webtoon_details.js"></script>
 </head>
 <body>
@@ -27,7 +29,7 @@
     </header>
     <hr class="webtoon-hr">
     <div id="webtoon-navigation">
-        <div id="webtoon-title"><a href="/webtoon/episode">화산귀환</a> | 1화</div>
+        <div id="webtoon-title"><a href="/webtoon/episode">화산귀환</a> | 2화</div>
         <div id="webtoon-links">
             <button>이전화</button>
             &nbsp;|
@@ -37,10 +39,15 @@
             &nbsp;
         </div>
     </div>
+	
     <main>
-        <div id="image-gallery">
-            
-        </div>
-    </main>
+    <div id="image-gallery">
+        <c:forEach items="${uploadedImages}" var="image">
+            <div class="image-item">
+                <img src="${pageContext.request.contextPath}/resources/uploadimg/${image.changeName}" alt="${image.originName}">
+           	</div>
+        </c:forEach>
+    </div>
+	</main>
 </body>
 </html>
