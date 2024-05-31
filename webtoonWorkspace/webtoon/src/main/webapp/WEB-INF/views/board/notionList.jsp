@@ -7,17 +7,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/webtoon/resources/css/notion.css">
-  <script defer src="/webtoon/resources/js/notion_list.js"></script>
+  <script defer src="/webtoon/resources/js/board.js"></script>
   <title>공지사항</title>
 </head>
 <body>
   <main>
     <div class="menu">
       <div id="my">
-        <div>${sessionScope.loginAdminVo.id}</div>
-        <div>${sessionScope.loginAdminVo.nick}</div>
-        <div>${sessionScope.loginAdminVo.no}</div>
-        <button id="insert_btn">글쓰기</button>
+      <c:choose>
+      	<c:when test="${not empty sessionScope.loginAdminVo}"> <!-- 관리자가 로그인 했을 때 -->
+	        <div>${sessionScope.loginAdminVo.id}</div>
+	        <div>${sessionScope.loginAdminVo.nick}</div>
+	        <div>${sessionScope.loginAdminVo.no}</div>
+	        <button id="insert_btn" onclick="location.href='/webtoon/board/notion/insert'">글쓰기</button>
+      	</c:when>
+      	<c:when test="${not empty sessionScope.loginMemberVo}"> <!-- 유저가 로그인 했을 떄 -->
+      		<div>${sessionScope.loginMemberVo.id}</div>
+	        <div>${sessionScope.loginMemberVo.nick}</div>
+	        <div>${sessionScope.loginMemberVo.vip_no}</div>
+	        <button id="insert_btn2">글쓰기</button>
+      	</c:when>
+      	<c:otherwise>
+      		<div>😊 아이디</div>
+	        <div>🙂 닉네임</div>
+	        <div>😙 회원 등급</div>
+	        <button id="insert_btn2">글쓰기</button>
+      	</c:otherwise>
+      </c:choose>
       </div>
       <div class="menu_btn"><a href="/webtoon/home">👆 웹툰</a></div>
       <div class="menu_btn"><a href="/webtoon/board/notion/list">👆 공지사항</a></div>

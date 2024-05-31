@@ -1,13 +1,14 @@
 body {
   margin: 0;
-  padding: 2% 2%;
+  padding: 5% 5%;
   text-align: left;
+  background-color: white;
 }
 .back a {
   text-decoration: none;
 }
 
-textarea[name="chat_content"] {
+textarea[name="content"] {
   width: 98%;
   height: 200px;
   border-radius: 10px;
@@ -44,8 +45,7 @@ hr {
 
 .comment {
   padding: 15px 0px;
-  display: flex;
-  align-items: center;
+  width: 98%;
 }
 
 .best {
@@ -68,9 +68,21 @@ hr {
 .good {
   width: 50px;
   height: 25px;
-  float: right;
   background-color: #dcedff;
   border: 1px solid #98a2ac;
   border-radius: 10px;
+  cursor: pointer;
+  float: right;
+}
+
+.nick {
+  width: 7%;
+  text-align: start;
+}
+
+.chat_btn{
+  background-color: white;
+  border: none;
+  font-size: 1.0rem;
   cursor: pointer;
 }
