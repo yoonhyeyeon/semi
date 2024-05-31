@@ -3,25 +3,27 @@ package webtoon.chat.vo;
 public class ChatVo {
 
 	private String no;
-	private String ref_episode_no;
-	private String member_no;
+	private String refEpisodeNo;
+	private String memberNo;
 	private String content;
 	private String hit;
-	private String enroll_date;
-	private String modify_date;
-	private String del_yn;
+	private String enrollDate;
+	private String modifyDate;
+	private String delYn;
+	private String nick;
 	
-	public ChatVo(String no, String ref_episode_no, String member_no, String content, String hit, String enroll_date,
-			String modify_date, String del_yn) {
+	public ChatVo(String no, String refEpisodeNo, String memberNo, String content, String hit, String enrollDate,
+			String modifyDate, String delYn, String nick) {
 		super();
 		this.no = no;
-		this.ref_episode_no = ref_episode_no;
-		this.member_no = member_no;
+		this.refEpisodeNo = refEpisodeNo;
+		this.memberNo = memberNo;
 		this.content = content;
 		this.hit = hit;
-		this.enroll_date = enroll_date;
-		this.modify_date = modify_date;
-		this.del_yn = del_yn;
+		this.enrollDate = enrollDate;
+		this.modifyDate = modifyDate;
+		this.delYn = delYn;
+		this.nick = nick;
 	}
 	public ChatVo() {
 		super();
@@ -33,17 +35,17 @@ public class ChatVo {
 	public void setNo(String no) {
 		this.no = no;
 	}
-	public String getRef_episode_no() {
-		return ref_episode_no;
+	public String getRefEpisodeNo() {
+		return refEpisodeNo;
 	}
-	public void setRef_episode_no(String ref_episode_no) {
-		this.ref_episode_no = ref_episode_no;
+	public void setRefEpisodeNo(String refEpisodeNo) {
+		this.refEpisodeNo = refEpisodeNo;
 	}
-	public String getMember_no() {
-		return member_no;
+	public String getMemberNo() {
+		return memberNo;
 	}
-	public void setMember_no(String member_no) {
-		this.member_no = member_no;
+	public void setMemberNo(String memberNo) {
+		this.memberNo = memberNo;
 	}
 	public String getContent() {
 		return content;
@@ -57,29 +59,35 @@ public class ChatVo {
 	public void setHit(String hit) {
 		this.hit = hit;
 	}
-	public String getEnroll_date() {
-		return enroll_date;
+	public String getEnrollDate() {
+		return enrollDate;
 	}
-	public void setEnroll_date(String enroll_date) {
-		this.enroll_date = enroll_date;
+	public void setEnrollDate(String enrollDate) {
+		this.enrollDate = enrollDate;
 	}
-	public String getModify_date() {
-		return modify_date;
+	public String getModifyDate() {
+		return modifyDate;
 	}
-	public void setModify_date(String modify_date) {
-		this.modify_date = modify_date;
+	public void setModifyDate(String modifyDate) {
+		this.modifyDate = modifyDate;
 	}
-	public String getDel_yn() {
-		return del_yn;
+	public String getDelYn() {
+		return delYn;
 	}
-	public void setDel_yn(String del_yn) {
-		this.del_yn = del_yn;
+	public void setDelYn(String delYn) {
+		this.delYn = delYn;
+	}
+	public String getNick() {
+		return nick;
+	}
+	public void setNick(String nick) {
+		this.nick = nick;
 	}
 	@Override
 	public String toString() {
-		return "ChatVo [no=" + no + ", ref_episode_no=" + ref_episode_no + ", member_no=" + member_no + ", content="
-				+ content + ", hit=" + hit + ", enroll_date=" + enroll_date + ", modify_date=" + modify_date
-				+ ", del_yn=" + del_yn + "]";
+		return "ChatVo [no=" + no + ", refEpisodeNo=" + refEpisodeNo + ", memberNo=" + memberNo + ", content=" + content
+				+ ", hit=" + hit + ", enrollDate=" + enrollDate + ", modifyDate=" + modifyDate + ", delYn=" + delYn
+				+ ", nick=" + nick + "]";
 	}
 	
 	

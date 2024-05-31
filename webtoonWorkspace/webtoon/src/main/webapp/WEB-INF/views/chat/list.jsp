@@ -8,43 +8,64 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Comment Page</title>
 <link rel="stylesheet" href="/webtoon/resources/css/comment.css">
-<script defer src="/JS/comment.js"></script>
+
+<script type="text/javascript">
+	function displaySet(exe, no, refEpisodeNo, content, cmd){
+		obj = document.frm;
+		obj.no.value = no;
+		obj.exe.value = exe;
+		obj.refEpisodeNo.value = refEpisodeNo;
+		while(content.indexOf("<br>") != -1){
+			content = content.replace("<br>","\n");
+		}
+		obj.content.value = content;
+		obj.cmd.value = cmd;
+	}
+</script>
+
 </head>
 <body>
-  <div class="back"><a href="/webtoon/home">< 뒤로가기</a></div>
+  <div class="back"><a href="/webtoon/details">< 뒤로가기</a></div>
   <br>
- <c:if test="${sessionScope.loginMemberVo != null}">
+  <form action="/webtoon/chat/insert" method="post">
 	<div class="clearfix">
-	    <textarea name="chat_content" id="commentText" placeholder="댓글을 입력해주세요."></textarea>
-	    <br>
-	    <button class="do" id="submitComment" onclick="writeReply(${vo.no});">등록</button>
+		<input type="hidden" name="exe" value="1">
+		<c:choose>
+			<c:when test="${not empty sessionScope.loginMemberVo}">
+			    <textarea name="content" id="commentText" placeholder="댓글을 입력해주세요."></textarea>
+	  			<br>
+	    		<input type="submit" class="do" value="등록" name="cmd">
+			</c:when>
+			<c:otherwise>
+			    <textarea name="content" id="commentText" placeholder="로그인 시 이용가능 합니다."></textarea>
+			    <br>
+			    <br>
+			</c:otherwise>
+		</c:choose>
 	</div>
- </c:if>
- <c:if test="${sessionScope.loginMemberVo == null}">
- 	<div class="clearfix">
-	    <textarea name="chat_content" id="commentText" placeholder="로그인 후 댓글 작성 가능합니다."></textarea>
-	    <br>
-	</div>
- </c:if>
+  </form>
 <br>
 <br>
 <hr>
 <div class="chat">
-  <span id="best">베스트 댓글</span> | <span id="entire">전체 댓글</span>
+  <button class="chat_btn">베스트 댓글</button> | <button class="chat_btn">전체 댓글</button>
 </div>
-<br>
 <br>
 <div class="main_chat" id="commentSection">
   <br>
   <span class="best">BEST</span>
-  <div class="comment-container">
-    <div class="comment">
-        <strong>문태웅</strong> | 내가 조장이야
-    </div>
-    <span class="day">2024-05-16 22:07</span>
-    <button class="good">👍</button>
-</div>
-  <hr>
+  <c:forEach items="${voList}" var="vo">
+	  <div class="comment-container">
+	    <div class="comment">
+	        <strong>${vo.nick}</strong> | <c:set value="${content}"></c:set>
+	    </div>
+	    <span class="day">${vo.enrollDate}</span>
+	    <button class="good">👍${hit}</button>
+	    <a href="javascript:displaySet(2, '${content}','수정')">수정</a>&nbsp;
+	    <a href="javascript:displaySet(3, '${content}', '삭제')">삭제</a>
+	  </div>
+	  <hr>
+  </c:forEach>
 </div>
 </body>
 </html>
