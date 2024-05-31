@@ -6,7 +6,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>webtoonDetails</title>
+    <title>webtoonDetails2</title>
     <link rel="stylesheet" href="/webtoon/resources/css/webtoon_details.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script defer src="/webtoon/resources/js/webtoon_details.js"></script>

@@ -43,19 +43,19 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <div class="episode-info">
                         <h2>1화. 화산귀환</h2>
-                        <p>2024-05-09</p>
+                        <p>2024-05-07</p>
                     </div>
                 </div>
             </a>
 
             <hr> <!-- 여기에 구분선 추가 -->
-            <a href="/webtoon/details">
+            <a href="/webtoon/webtoon/display">
                 <div class="episode">
                     <img src="/webtoon/resources/img/episode/m02.jpg" alt="1화 이미지" class="episode-img">
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <div class="episode-info">
                         <h2>2화. 화산귀환</h2>
-                        <p>2024-05-09</p>
+                        <p>2024-05-13</p>
                     </div>
                 </div>
             </a>
@@ -67,7 +67,7 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <div class="episode-info">
                         <h2>3화. 화산귀환</h2>
-                        <p>2024-05-09</p>
+                        <p>2024-05-17</p>
                     </div>
                 </div>
             </a>
@@ -79,7 +79,7 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <div class="episode-info">
                         <h2>4화. 화산귀환</h2>
-                        <p>2024-05-09</p>
+                        <p>2024-05-19</p>
                     </div>
                 </div>
             </a>
@@ -91,7 +91,7 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <div class="episode-info">
                         <h2>5화. 화산귀환</h2>
-                        <p>2024-05-09</p>
+                        <p>2024-05-25</p>
                     </div>
                 </div>
             </a>
@@ -103,7 +103,7 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <div class="episode-info">
                         <h2>6화. 화산귀환</h2>
-                        <p>2024-05-09</p>
+                        <p>2024-05-31</p>
                     </div>
                 </div>
             </a>

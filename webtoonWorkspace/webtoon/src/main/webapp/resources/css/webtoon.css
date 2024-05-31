@@ -12,9 +12,13 @@ header {
     background-color: #f1f1f1;
 }
 
-.logo {
+.logo{
     font-size: 24px;
     font-weight: bold;
+}
+
+.logo a {
+    text-decoration: none;
 }
 
 nav {

@@ -14,7 +14,7 @@
 <body>
     <header>
         <div id="logo">
-            <img src="/webtoon/resources/img/logo/moontoon.png" alt="MoonToon Logo" style="height: 40px;">
+          <a onclick="location.href='/webtoon/webtoon'"><img src="/webtoon/resources/img/logo/moontoon.png" alt="MoonToon Logo" style="height: 40px;"></a>  
         </div>
         
         
@@ -101,7 +101,7 @@
                         <a href="/webtoon/episode"><img src="/webtoon/resources/img/toon/toon004.jpg" alt="웹툰 이미지"></a>
                     </div>
                     <div class="webtoon-item">
-                        <a href="/webtoon/episode"><img src="/webtoon/resources/img/toon/toon029.jpg" alt="웹툰 이미지"></a>
+                        <a href="/webtoon/episode"><img src="/webtoon/resources/img/toon/toon005.jpg" alt="웹툰 이미지"></a>
                     </div>
                     <div class="webtoon-item">
                         <a href="/webtoon/episode"><img src="/webtoon/resources/img/toon/toon030.jpg" alt="웹툰 이미지"></a>
@@ -114,7 +114,7 @@
                 <h3>화</h3>
                 <div class="webtoon-grid">
                     <div class="webtoon-item">
-                        <a href="/webtoon/episode"><img src="/webtoon/resources/img/toon/toon005.jpg" alt="웹툰 이미지"></a>
+                        <a href="/webtoon/episode"><img src="/webtoon/resources/img/toon/toon029.jpg" alt="웹툰 이미지"></a>
                     </div>
                     <div class="webtoon-item">
                         <a href="/webtoon/episode"><img src="/webtoon/resources/img/toon/toon006.jpg" alt="웹툰 이미지"></a>
@@ -126,7 +126,7 @@
                         <a href="/webtoon/episode"><img src="/webtoon/resources/img/toon/toon008.jpg" alt="웹툰 이미지"></a>
                     </div>
                     <div class="webtoon-item">
-                        <a href="/webtoon/episode"><img src="/webtoon/resources/img/toon/toon031.jpg" alt="웹툰 이미지"></a>
+                        <a href="/webtoon/episode"><img src="/webtoon/resources/img/toon/toon009.jpg" alt="웹툰 이미지"></a>
                     </div>
                     <!-- 추가 웹툰 아이템들 -->
                 </div>
@@ -135,7 +135,7 @@
                 <h3>수</h3>
                 <div class="webtoon-grid">
                     <div class="webtoon-item">
-                        <a href="/webtoon/episode"><img src="/webtoon/resources/img/toon/toon009.jpg" alt="웹툰 이미지"></a>
+                        <a href="/webtoon/episode"><img src="/webtoon/resources/img/toon/toon031.jpg" alt="웹툰 이미지"></a>
                     </div>
                     <div class="webtoon-item">
                         <a href="/webtoon/episode"><img src="/webtoon/resources/img/toon/toon010.jpg" alt="웹툰 이미지"></a>
@@ -147,7 +147,7 @@
                         <a href="/webtoon/episode"><img src="/webtoon/resources/img/toon/toon012.jpg" alt="웹툰 이미지"></a>
                     </div>
                     <div class="webtoon-item">
-                        <a href="/webtoon/episode"><img src="/webtoon/resources/img/toon/toon032.webp" alt="웹툰 이미지"></a>
+                        <a href="/webtoon/episode"><img src="/webtoon/resources/img/toon/toon038.jpg" alt="웹툰 이미지"></a>
                     </div>
                     
                     
@@ -193,7 +193,7 @@
                         <a href="/webtoon/episode"><img src="/webtoon/resources/img/toon/toon020.jpg" alt="웹툰 이미지"></a>
                     </div>
                     <div class="webtoon-item">
-                        <a href="/webtoon/episode"><img src="/webtoon/resources/img/toon/toon001.jpg" alt="웹툰 이미지"></a>
+                        <a href="/webtoon/episode"><img src="/webtoon/resources/img/toon/toon037.jpg" alt="웹툰 이미지"></a>
                     </div>
                     <!-- 추가 웹툰 아이템들 -->
                 </div>
@@ -214,10 +214,10 @@
                         <a href="/webtoon/episode"><img src="/webtoon/resources/img/toon/toon024.jpg" alt="웹툰 이미지"></a>
                     </div>
                     <div class="webtoon-item">
-                        <a href="/webtoon/episode"><img src="/webtoon/resources/img/toon/toon001.jpg" alt="웹툰 이미지"></a>
+                        <a href="/webtoon/episode"><img src="/webtoon/resources/img/toon/toon035.jpg" alt="웹툰 이미지"></a>
                     </div>
                     <div class="webtoon-item">
-                        <a href="/webtoon/episode"><img src="/webtoon/resources/img/toon/toon001.jpg" alt="웹툰 이미지"></a>
+                        <a href="/webtoon/episode"><img src="/webtoon/resources/img/toon/toon036.jpg" alt="웹툰 이미지"></a>
                     </div>
                     <!-- 추가 웹툰 아이템들 -->
                 </div>
@@ -238,10 +238,10 @@
                         <a href="/webtoon/episode"><img src="/webtoon/resources/img/toon/toon028.jpg" alt="웹툰 이미지"></a>
                     </div>
                     <div class="webtoon-item">
-                        <a href="/webtoon/episode"><img src="/webtoon/resources/img/toon/toon001.jpg" alt="웹툰 이미지"></a>
+                        <a href="/webtoon/episode"><img src="/webtoon/resources/img/toon/toon033.jpg" alt="웹툰 이미지"></a>
                     </div>
                     <div class="webtoon-item">
-                        <a href="/webtoon/episode"><img src="/webtoon/resources/img/toon/toon001.jpg" alt="웹툰 이미지"></a>
+                        <a href="/webtoon/episode"><img src="/webtoon/resources/img/toon/toon034.jpg" alt="웹툰 이미지"></a>
                     </div>
 
                     <!-- 추가 웹툰 아이템들 -->
