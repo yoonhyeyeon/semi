@@ -10,22 +10,29 @@
     <title>결제페이지</title>
 </head>
 <body>
+
     <header>
         <span>결제하기</span>
         <br>
     </header>
     <hr>
+    <form action="/webtoon/pay/payment" method="post">
     <div class="coin-info">
-        <div id="coinInfo">100코인</div>
+    
+        <div id="coinInfo">
+        ${coin} 코인
+        <input type="hidden" id="coin" name="coin" readonly value="${coin}" >
+        </div>
     </div>
     <hr>
     <div class="coin-box">
         <span>상품금액</span>
-        <span id="coinPrice">13,700원</span>
+        <span id="coinPrice">${temp}원</span>
     </div>
       <div class="total">
         <span><strong>최종 결제 금액</strong></span>
-        <span id="totalPrice"><strong>13,700원</strong></span>
+        <span id="totalPrice"><strong>${temp}원</strong></span>
+        <input type="hidden" id="totalprice" name="totalPrice" readonly value="${temp}" >
       </div>
       <br>
       <hr>
@@ -59,6 +66,7 @@
     <br>
     <hr>
     <br>
-    <button class="pay">결제하기</button>
+    <button class="pay" type="submit">결제하기</button>
+    </form>
 </body>
 </html>

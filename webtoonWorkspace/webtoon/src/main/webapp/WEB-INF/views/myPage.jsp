@@ -18,7 +18,6 @@
         <div class="user-image">👤</div>
         <div class="user-details">
             <div>${sessionScope.loginMemberVo.nick}</div>
-            <div>${sessionScope.loginMemberVo.vip_no}</div>
             <button onclick="location.href='/webtoon/member/edit'">정보수정</button>
         </div>
     </div>

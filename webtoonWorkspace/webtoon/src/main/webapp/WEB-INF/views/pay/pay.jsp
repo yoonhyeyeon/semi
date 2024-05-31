@@ -20,12 +20,20 @@
       </div>
     <div class="line"></div>
 
+	<script type="text/javascript">
+		function total(x) {
+			const temp = document.querySelector("#temp");
+			temp.value = x;
+		}
+	</script>
 
-	<form action="/webtoon/pay" method="post">
+	<form action="/webtoon/pay/payment" method="get">
+	<input type="hidden" name="temp" id="temp">
     <div class="section popular">
+    
         <div>
             <div class="red-box">인기</div>
-            <div class="coin"><input type="radio" name="coin" value="100">100코인</div>
+            <div class="coin"><input type="radio" name="coin" value="100" onclick="total(13700);">100코인</div>
         </div>
         <div class="price">13,700원</div>
     </div>
@@ -34,7 +42,7 @@
     <div class="section total">
         <div>
             <div class="grey-box">전체</div>
-            <div class="coin"><input type="radio" name="coin" value="10">10코인</div>
+            <div class="coin"><input type="radio" name="coin" value="10" onclick="total(1370);">10코인</div>
         </div>
         <div class="price">1,370원</div>
     </div>
@@ -42,7 +50,7 @@
 
     <div class="section total">
         <div>
-            <div class="coin"><input type="radio" name="coin" value="50">50코인</div>
+            <div class="coin"><input type="radio" name="coin" value="50" onclick="total(6850);">50코인</div>
         </div>
         <div class="price">6,850원</div>
     </div>
@@ -50,7 +58,7 @@
 
     <div class="section total">
         <div>
-            <div class="coin"><input type="radio" name="coin" value="100">100코인</div>
+            <div class="coin"><input type="radio" name="coin" value="100"  onclick="total(13700);">100코인</div>
         </div>
         <div class="price">13,700원</div>
     </div>
@@ -58,7 +66,7 @@
 
     <div class="section total">
         <div>
-            <div class="coin"><input type="radio" name="coin" value="500">500코인</div>
+            <div class="coin"><input type="radio" name="coin" value="500" onclick="total(68500);">500코인</div>
         </div>
         <div class="price">68,500원</div>
     </div>
@@ -66,7 +74,7 @@
 
     <div class="section total">
         <div>
-            <div class="coin"><input type="radio" name="coin" value="1000">1000코인</div>
+            <div class="coin"><input type="radio" name="coin" value="1000" onclick="total(137000);">1000코인</div>
         </div>
         <div class="price">137,000원</div>
     </div>
@@ -75,4 +83,4 @@
 	</form>
 
 </body>
-</html>>
+</html>

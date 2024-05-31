@@ -29,10 +29,11 @@ public class PayDao {
 	public int pay(Connection conn, MemberVo loginMembervo) throws Exception{
 		
 		//sql
-		String sql = "UPDATE MEMBER SET MCOIN = ? WHERE NO = ?";
+		String sql = "UPDATE MEMBER SET MCOIN = ? ,PAY_TOTAL = ? WHERE NO = ?";
 		PreparedStatement pstmt = conn.prepareStatement(sql);
 		pstmt.setInt(1, loginMembervo.getMcoin());
-		pstmt.setString(2, loginMembervo.getNo());
+		pstmt.setInt(2, loginMembervo.getPay_total());
+		pstmt.setString(3, loginMembervo.getNo());
 		int result = pstmt.executeUpdate();
 		
 		close(pstmt);
@@ -42,7 +43,7 @@ public class PayDao {
 
 	public int payUpdate(Connection conn, MemberVo loginMembervo) throws Exception{
 		
-		String sql ="SELECT MCOIN FROM MEMBER WHERE NO = ?";
+		String sql ="SELECT * FROM MEMBER WHERE NO = ?";
 		PreparedStatement pstmt = conn.prepareStatement(sql);
 		pstmt.setString(1, loginMembervo.getNo());
 		int result = pstmt.executeUpdate();
