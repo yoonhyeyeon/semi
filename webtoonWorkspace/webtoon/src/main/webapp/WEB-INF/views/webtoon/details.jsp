@@ -42,13 +42,14 @@
             <img src="/webtoon/resources/img/episode/ep001.jpeg" alt="Image 1">
             <img src="/webtoon/resources/img/episode/ep002.jpeg" alt="Image 2">
             <img src="/webtoon/resources/img/episode/ep003.jpeg" alt="Image 2">
-            <img src="/webtoon/resources/img/episode/ep003.jpeg" alt="Image 2">
             <img src="/webtoon/resources/img/episode/ep004.jpeg" alt="Image 2">
+            <img src="/webtoon/resources/img/episode/ep045.jpeg" alt="Image 2">
             <img src="/webtoon/resources/img/episode/ep005.jpeg" alt="Image 2">
             <img src="/webtoon/resources/img/episode/ep006.jpeg" alt="Image 2">
             <img src="/webtoon/resources/img/episode/ep007.jpeg" alt="Image 2">
             <img src="/webtoon/resources/img/episode/ep008.jpeg" alt="Image 2">
             <img src="/webtoon/resources/img/episode/ep009.jpeg" alt="Image 2">
+            <img src="/webtoon/resources/img/episode/ep010.jpeg" alt="Image 2">
             <img src="/webtoon/resources/img/episode/ep011.jpeg" alt="Image 2">
             <img src="/webtoon/resources/img/episode/ep012.jpeg" alt="Image 2">
             <img src="/webtoon/resources/img/episode/ep013.jpeg" alt="Image 2">

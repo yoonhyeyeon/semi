@@ -1,6 +1,6 @@
 package webtoon.webtoon.service;
 
-import static webtoon.db.SqlSessionTemplate.*;
+import static webtoon.db.SqlSessionTemplate.getSqlSession;
 
 import java.sql.Connection;
 import java.util.List;
@@ -58,6 +58,29 @@ public class WebtoonService {
 		return attVoList;
 	}
 
-	
+	 public List<AttachmentVo> getAllAttachments() throws Exception {
+        Connection conn = null;
+        try {
+            conn = JDBCTemplate.getConnection();
+            return dao.getAllAttachments(conn);
+        } finally {
+            JDBCTemplate.close(conn);
+        }
+    }
+
+
 	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
