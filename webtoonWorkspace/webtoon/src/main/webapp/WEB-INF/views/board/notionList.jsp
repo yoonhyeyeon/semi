@@ -35,9 +35,21 @@
       	</c:otherwise>
       </c:choose>
       </div>
-      <div class="menu_btn"><a href="/webtoon/home">👆 웹툰</a></div>
-      <div class="menu_btn"><a href="/webtoon/board/notion/list">👆 공지사항</a></div>
-      <div class="menu_btn"><a href="/webtoon/board/freeBoard/list">👆 자유게시판</a></div>
+			<div class="menu_btn">
+				<a href="/webtoon/home">👆 웹툰</a>
+			</div>
+            <div class="menu_btn">
+                <a href="/webtoon/myPage">👆 마이페이지</a>
+            </div>
+			<div class="menu_btn">
+				<a href="/webtoon/board/notion/list">👆 공지사항</a>
+			</div>
+			<div class="menu_btn">
+				<a href="/webtoon/board/freeBoard/list">👆 자유게시판</a>
+			</div>
+            <div class="menu_btn">
+				<a href="/webtoon/#">👆 고객센터</a>
+			</div>
     </div>
     <div class="list">
       <div id="list_main">공지사항</div>

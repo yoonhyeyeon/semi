@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -38,11 +39,17 @@
 			<div class="menu_btn">
 				<a href="/webtoon/home">👆 웹툰</a>
 			</div>
+            <div class="menu_btn">
+                <a href="/webtoon/myPage">👆 마이페이지</a>
+            </div>
 			<div class="menu_btn">
 				<a href="/webtoon/board/notion/list">👆 공지사항</a>
 			</div>
 			<div class="menu_btn">
 				<a href="/webtoon/board/freeBoard/list">👆 자유게시판</a>
+			</div>
+            <div class="menu_btn">
+				<a href="/webtoon/#">👆 고객센터</a>
 			</div>
 		</div>
 		<div class="list">
