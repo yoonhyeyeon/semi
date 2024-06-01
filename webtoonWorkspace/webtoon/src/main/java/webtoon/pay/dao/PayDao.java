@@ -6,6 +6,8 @@ import java.sql.PreparedStatement;
 import oracle.jdbc.proxy.annotation.Pre;
 import webtoon.member.vo.MemberVo;
 import webtoon.pay.vo.PayAddVo;
+import webtoon.pay.vo.PayVo;
+
 import static webtoon.db.JDBCTemplate.*;
 
 public class PayDao {
@@ -54,5 +56,6 @@ public class PayDao {
 		
 				
 	}
+
 
 }
