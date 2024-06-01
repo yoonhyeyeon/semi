@@ -7,6 +7,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import webtoon.member.service.MemberService;
 import webtoon.member.vo.MemberVo;
@@ -22,6 +23,8 @@ public class MemberJoinController extends HttpServlet{
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		try {
+			
+			HttpSession session = req.getSession();
 
 			String id = req.getParameter("id");
 			String pwd = req.getParameter("pwd");
@@ -42,11 +45,10 @@ public class MemberJoinController extends HttpServlet{
 			MemberService ms = new MemberService();
 			int result = ms.memberJoin(vo);
 			
-			if(result ==1) {
-				req.setAttribute("resultMsg", "회원가입 성공");
-			}else {
-				req.setAttribute("resultMsg", "회원가입 실패...");
+			if(result !=1) {
+				session.setAttribute("alertMsg", "회원가입 실패...");
 			}
+			session.setAttribute("alertMsg", "회원가입 성공");
 			resp.sendRedirect("/webtoon/member/login");
 			
 		}catch(Exception e){

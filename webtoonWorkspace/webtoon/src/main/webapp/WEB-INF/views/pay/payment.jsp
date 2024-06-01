@@ -41,6 +41,11 @@
       <img id="card01" src="/webtoon/resources/img/icon/카드.png" alt="카드 아이콘"><span><strong>Moon Pay</strong></span>
       <br><br>
       <input type="radio" name="select"><span>카드 간편결제</span>
+      <select name="card">
+      	<option value="1">1번 카드</option>
+      	<option ></option>
+      	<option ></option>
+      </select>
       <br><br>
       <div class="card_slide_container">
         <button class="slide-btn" id="slideLeft" onclick="slide('left')">&lt;</button>

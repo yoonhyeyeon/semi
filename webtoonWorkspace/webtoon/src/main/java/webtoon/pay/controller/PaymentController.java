@@ -11,6 +11,8 @@ import javax.servlet.http.HttpSession;
 
 import webtoon.member.vo.MemberVo;
 import webtoon.pay.service.PayService;
+import webtoon.pay.vo.PayAddVo;
+import webtoon.pay.vo.PayVo;
 
 @WebServlet("/pay/payment")
 public class PaymentController extends HttpServlet{
@@ -49,6 +51,7 @@ public class PaymentController extends HttpServlet{
 			
 			HttpSession session = req.getSession();
 			MemberVo loginMemberVo = (MemberVo)session.getAttribute("loginMemberVo");
+
 	
 			String no = loginMemberVo.getNo();
 			String nick = loginMemberVo.getNick();
@@ -62,6 +65,7 @@ public class PaymentController extends HttpServlet{
 			String price1 = req.getParameter("totalPrice");
 			int price = Integer.parseInt(price1);
 			int payTotal = pay_total + price;
+
 			
 			MemberVo vo = new MemberVo();
 			vo.setNo(no);

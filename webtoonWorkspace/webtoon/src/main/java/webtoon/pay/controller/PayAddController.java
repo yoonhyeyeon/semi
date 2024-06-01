@@ -59,9 +59,6 @@ public class PayAddController extends HttpServlet{
 			vo.setCard_pwd(pwd);
 			vo.setMember_no(memberNo);
 			
-			System.out.println(bank);
-			System.out.println(str);
-			System.out.println(pwd);
 			
 			PayService ps = new PayService();
 			int result = ps.payAdd(vo);
