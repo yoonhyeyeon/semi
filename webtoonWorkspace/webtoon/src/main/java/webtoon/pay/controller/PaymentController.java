@@ -23,9 +23,14 @@ public class PaymentController extends HttpServlet{
 		try {
 			HttpSession session = req.getSession();
 			MemberVo loginMemberVo = (MemberVo)session.getAttribute("loginMemberVo");
+			PayAddVo payAddVo = (PayAddVo)session.getAttribute("payAddVo");
 			
 			if(loginMemberVo == null) {
 				throw new Exception("로그인 하고 오세요");
+			}
+			
+			if(payAddVo == null) {
+				throw new Exception("카드 정보가 없습니다.");
 			}
 			
 			String coin = req.getParameter("coin");
@@ -34,7 +39,7 @@ public class PaymentController extends HttpServlet{
 			
 			
 			req.setAttribute("coin", coin);
-			req.setAttribute("temp", price);		
+			req.setAttribute("temp", price);
 			req.getRequestDispatcher("/WEB-INF/views/pay/payment.jsp").forward(req, resp);
 		}catch(Exception e) {
 			e.printStackTrace();
@@ -51,6 +56,9 @@ public class PaymentController extends HttpServlet{
 			
 			HttpSession session = req.getSession();
 			MemberVo loginMemberVo = (MemberVo)session.getAttribute("loginMemberVo");
+			PayAddVo payAddVo = (PayAddVo)session.getAttribute("payAddVo");
+			
+			String payAddNo = payAddVo.getNo();
 
 	
 			String no = loginMemberVo.getNo();
@@ -65,6 +73,13 @@ public class PaymentController extends HttpServlet{
 			String price1 = req.getParameter("totalPrice");
 			int price = Integer.parseInt(price1);
 			int payTotal = pay_total + price;
+			
+			//PayVO
+			PayVo pvo = new PayVo();
+			pvo.setMember_no(no);
+			pvo.setPayment_method_no(payAddNo);
+			pvo.setPay(price);
+			
 
 			
 			MemberVo vo = new MemberVo();
@@ -76,12 +91,16 @@ public class PaymentController extends HttpServlet{
 			PayService ps = new PayService();
 			int result = ps.pay(vo);
 			int result2 = ps.payupdate(vo);
+			int result3 = ps.getPayment(loginMemberVo, payAddVo, pvo);
 			
 			if(result != 1) {
 				throw new Exception("결제 오류입니다.");
 			}
 			if(result2 != 1) {
 				throw new Exception("문코인 업데이트 오류입니다.");
+			}
+			if(result3 != 1) {
+				throw new Exception("결제 오류입니다.");
 			}
 			session.setAttribute("alertMsg", "결제완료!");
 			session.setAttribute("loginMemberVo", vo);
