@@ -18,7 +18,7 @@ import webtoon.webtoon.vo.CategoryVo;
 
 public class HomeDao {
 
-	public List<HomeVo> HomeList(Connection conn, PageVo pvo) throws Exception {
+	public List<HomeVo> HomeList(Connection conn) throws Exception {
 //		return ss.selectList("HomeMapper.home_list", pvo);
 		String sql = "SELECT NO, NAME FROM WEBTOON";
 		PreparedStatement pstmt = conn.prepareStatement(sql);

@@ -21,11 +21,11 @@ public class HomeService {
 		this.dao = new HomeDao();
 	}
 	
-	public List<HomeVo> HomeList(PageVo pvo) throws Exception {
+	public List<HomeVo> HomeList() throws Exception {
 //		SqlSession ss = getSqlSession();
 		Connection conn = getConnection();
 		
-		List<HomeVo> voList = dao.HomeList(conn, pvo);
+		List<HomeVo> voList = dao.HomeList(conn);
 //		ss.close();
 		close(conn);
 		

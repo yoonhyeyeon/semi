@@ -33,12 +33,12 @@ public class HomeListController extends HttpServlet{
 //			int boardLimit = 10;
 			
 //			PageVo pvo = new PageVo(listCount, currentPage, listCount, currentPage);
-			List<HomeVo> voList = hs.HomeList(pvo);
+			List<HomeVo> voList = hs.HomeList();
 			
 			req.setAttribute("voList", voList);
 			System.out.println(voList);
 			
-			req.setAttribute("pvo", pvo);
+//			req.setAttribute("pvo", pvo);
 			req.getRequestDispatcher("/WEB-INF/views/home.jsp").forward(req, resp);
 		}catch(Exception e) {
 			e.printStackTrace();
