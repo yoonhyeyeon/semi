@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="HomeMapper">
+	
+	<select id="home_list" resultType="webtoon.home.vo.HomeVo">
+		SELECT NAME
+		FROM WEBTOON
+	</select>
+
+	<insert id="home_insert">
+		INSERT INTO 
+		WEBTOON 
+		(
+		    NO
+		    , GENRE_NO
+		    , NAME
+		    , DAY
+		)
+		VALUES
+		(
+		    SEQ_WEBTOON_NO.NEXTVAL
+		    , ${genre_no}
+		    , #{name}
+		    , ${day}
+		)
+	</insert>
+
+	<insert id="insertHomeAttachment">
+		INSERT ALL
+		<foreach collection="list" item="vo" separator=" ">
+		 INTO HOME_ATTACHMENT
+		 (
+			 NO
+			 , WEBTOON_NO
+			 , ORIGIN_NAME
+			 , CHANGE_NAME
+		 ) 
+		 VALUES 
+		 (
+			 (SELECT FN_GET_HOME_ATTACHMENT_NO_SEQ_NEXTVAL FROM DUAL)
+			 , SEQ_WEBTOON_NO.CURRVAL
+			 , #{vo.originName}
+			 , #{vo.changeName}
+		 )
+		</foreach>
+		SELECT * FROM DUAL
+	</insert>
+
+</mapper>
+

@@ -21,5 +21,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	<mapper resource="/mapper/admin-mapper.xml"/>
 	<mapper resource="/mapper/chat-mapper.xml"/>
 	<mapper resource="/mapper/webtoon-mapper.xml"/>
+	<mapper resource="/mapper/episode-mapper.xml"/>
+	<mapper resource="/mapper/home-mapper.xml"/>
 </mappers>
 </configuration>
