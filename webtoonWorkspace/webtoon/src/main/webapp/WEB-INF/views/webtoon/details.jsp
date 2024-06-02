@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
@@ -32,7 +33,7 @@
     <div id="webtoon-navigation">
         <div id="webtoon-title"><a href="/webtoon/episode">화산귀환</a> | 1화</div>
         <div id="webtoon-links">
-        	<a href=".clearfix" id="scroll_move">댓글 목록</a>
+        	<button class="itembtn">댓글 목록</button>
         	&nbsp;|
             <button>이전화</button>
             &nbsp;|
@@ -91,7 +92,7 @@
             <img src="/webtoon/resources/img/episode/ep044.jpeg" alt="Image 2">
         </div>
          <br><br><br>
-        <div class="clearfix" id="scroll_move">
+        <div class="clearfix">
 			<c:choose>
 				<c:when test="${not empty sessionScope.loginMemberVo}">
 				    <textarea name="content" id="commentText" placeholder="댓글을 입력해주세요."></textarea>

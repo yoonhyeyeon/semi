@@ -66,14 +66,8 @@ function ChatLoad(refEpisodeNo){
 	
 }
 
+const itemBtn = document.querySelector('.itembtn');
 
-$(document).ready(function($){
-	
-	$("#scroll_move").click(function(event){
-		
-		event.preventDefault();
-		
-		$('html,body').animate({scrollTop:$(this.hash).offset().Top}, 500);
-		
-	});
+itemBtn.addEventListener('click', function() {
+    document.querySelector('.clearfix').scrollIntoView({ behavior: "smooth" });
 });

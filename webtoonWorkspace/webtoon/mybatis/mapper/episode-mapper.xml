@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="EpisodeMapper">
+	
+	<select id="episode_list" resultType="webtoon.episode.vo.EpisodeVo">
+		SELECT
+		    WEBTOON_NAME
+		    , TITLE
+		    , WRITER
+		    , ENROLL_DATE
+		FROM WEBTOON_EPISODE
+		ORDER BY NO DESC
+	</select>
+
+</mapper>
+

@@ -1,3 +1,4 @@
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -87,7 +88,19 @@
         <div class="webtoon-days">
             <div class="webtoon-day" id="monday">
                 <h3>월</h3>
+                		<c:forEach items="${voList}" var="vo">
+						        <div class="webtoon-item">
+						            <a href="/webtoon/episode?no=${vo.no}"><img src="/webtoon/resources/uploadimg/${vo.profile}" alt="웹툰 이미지"></a>
+						        </div>
+						</c:forEach>
                 <div class="webtoon-grid">
+						<c:forEach items="${voList}" var="vo">
+						    <c:if test="${vo.day == 1}">
+						        <div class="webtoon-item">
+						            <a href="/webtoon/episode?no=${vo.no}"><img src="/webtoon/resources/uploadimg/${vo.profile}" alt="웹툰 이미지"></a>
+						        </div>
+						    </c:if>
+						</c:forEach>
                     <div class="webtoon-item">
                        <a href="/webtoon/episode"><img src="/webtoon/resources/img/toon/toon001.jpg" alt="웹툰 이미지"></a>
                     </div>
@@ -113,6 +126,13 @@
             <div class="webtoon-day" id="tuesday">
                 <h3>화</h3>
                 <div class="webtoon-grid">
+					<c:forEach items="${voList}" var="vo">
+					    <c:if test="${vo.day == 2}">
+					        <div class="webtoon-item">
+					            <a href="/webtoon/episode?no=${vo.no}"><img src="/webtoon/resources/uploadimg/${vo.profile}" alt="웹툰 이미지"></a>
+					        </div>
+					    </c:if>
+					</c:forEach>
                     <div class="webtoon-item">
                         <a href="/webtoon/episode"><img src="/webtoon/resources/img/toon/toon029.jpg" alt="웹툰 이미지"></a>
                     </div>
@@ -134,6 +154,13 @@
             <div class="webtoon-day" id="wednesday">
                 <h3>수</h3>
                 <div class="webtoon-grid">
+					<c:forEach items="${voList}" var="vo">
+					    <c:if test="${vo.day == 3}">
+					        <div class="webtoon-item">
+					            <a href="/webtoon/episode?no=${vo.no}"><img src="/webtoon/resources/uploadimg/${vo.profile}" alt="웹툰 이미지"></a>
+					        </div>
+					    </c:if>
+					</c:forEach>
                     <div class="webtoon-item">
                         <a href="/webtoon/episode"><img src="/webtoon/resources/img/toon/toon031.jpg" alt="웹툰 이미지"></a>
                     </div>
@@ -157,6 +184,13 @@
             <div class="webtoon-day" id="thursday">
                 <h3>목</h3>
                 <div class="webtoon-grid">
+					<c:forEach items="${voList}" var="vo">
+					    <c:if test="${vo.day == 4}">
+					        <div class="webtoon-item">
+					            <a href="/webtoon/episode?no=${vo.no}"><img src="/webtoon/resources/uploadimg/${vo.profile}" alt="웹툰 이미지"></a>
+					        </div>
+					    </c:if>
+					</c:forEach>
                     <div class="webtoon-item">
                         <a href="/webtoon/episode"><img src="/webtoon/resources/img/toon/toon013.jpg" alt="웹툰 이미지"></a>
                     </div>
@@ -180,6 +214,13 @@
             <div class="webtoon-day" id="friday">
                 <h3>금</h3>
                 <div class="webtoon-grid">
+					<c:forEach items="${voList}" var="vo">
+					    <c:if test="${vo.day == 5}">
+					        <div class="webtoon-item">
+					            <a href="/webtoon/episode?no=${vo.no}"><img src="/webtoon/resources/uploadimg/${vo.profile}" alt="웹툰 이미지"></a>
+					        </div>
+					    </c:if>
+					</c:forEach>
                     <div class="webtoon-item">
                         <a href="/webtoon/episode"><img src="/webtoon/resources/img/toon/toon017.jpg" alt="웹툰 이미지"></a>
                     </div>
@@ -201,6 +242,13 @@
             <div class="webtoon-day" id="saturday">
                 <h3>토</h3>
                 <div class="webtoon-grid">
+					<c:forEach items="${voList}" var="vo">
+					    <c:if test="${vo.day == 6}">
+					        <div class="webtoon-item">
+					            <a href="/webtoon/episode?no=${vo.no}"><img src="/webtoon/resources/uploadimg/${vo.profile}" alt="웹툰 이미지"></a>
+					        </div>
+					    </c:if>
+					</c:forEach>
                     <div class="webtoon-item">
                         <a href="/webtoon/episode"><img src="/webtoon/resources/img/toon/toon021.jpg" alt="웹툰 이미지"></a>
                     </div>
@@ -225,6 +273,13 @@
             <div class="webtoon-day" id="sunday">
                 <h3>일</h3>
                 <div class="webtoon-grid">
+					<c:forEach items="${voList}" var="vo">
+					    <c:if test="${vo.day == 7}">
+					        <div class="webtoon-item">
+					            <a href="/webtoon/episode?no=${vo.no}"><img src="/webtoon/resources/uploadimg/${vo.profile}" alt="웹툰 이미지"></a>
+					        </div>
+					    </c:if>
+					</c:forEach>
                     <div class="webtoon-item">
                         <a href="/webtoon/episode"><img src="/webtoon/resources/img/toon/toon025.jpg" alt="웹툰 이미지"></a>
                     </div>
