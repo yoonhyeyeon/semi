@@ -25,7 +25,7 @@ public class PayAddController extends HttpServlet{
 			MemberVo loginMemberVo = (MemberVo)session.getAttribute("loginMemberVo");
 			if(loginMemberVo == null) {
 				throw new Exception("로그인 하고 오세요");
-			}			
+			}	
 			req.getRequestDispatcher("/WEB-INF/views/pay/payAdd.jsp").forward(req, resp);			
 		}catch (Exception e) {
 			e.printStackTrace();
@@ -71,7 +71,7 @@ public class PayAddController extends HttpServlet{
 		}catch(Exception e) {
 			System.out.println(e.getMessage());
 			e.printStackTrace();
-			req.setAttribute("errMsg", "카드 등록 중 에러 발생");
+			req.setAttribute("errMsg", "이미 등록된 카드가 있습니다");
 			req.getRequestDispatcher("/WEB-INF/views/common/error.jsp").forward(req, resp);
 		}
 	}

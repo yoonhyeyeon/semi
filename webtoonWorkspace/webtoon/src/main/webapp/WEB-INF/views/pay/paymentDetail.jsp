@@ -18,13 +18,19 @@
         <div class="user-image">👤</div>
         <div class="user-details">
             <div>${sessionScope.loginMemberVo.nick}</div>
-            <button onclick="location.href='/webtoon/member/edit'">정보수정</button>
         </div>
     </div>
     <hr>
     <ul>
-        <li><a href="#"><div class="icon"><img src="/webtoon/resources/img/icon/결제내역.png" alt="결제내역 아이콘"></div>결제내역</a></li>
+        <li><div class="icon"><img src="/webtoon/resources/img/icon/결제내역.png" alt="결제내역 아이콘"></div>결제내역</li>
         <hr>
     </ul>
+        <li>회원번호 : ${sessionScope.loginMemberVo.no}</li>
+        <hr>
+        <c:forEach items="${payVoList}" var="vo">
+        	<p>결제 금액 : ${vo.pay}</p> 
+        	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        	<p>결제 일시 : ${vo.enroll_date}</p>
+        </c:forEach>
 </body>
 </html>

@@ -24,11 +24,13 @@
     <hr>
     <div class="coin-box">
         <span>보유 M코인: ${sessionScope.loginMemberVo.mcoin} <img id="icon02" src="/webtoon/resources/img/icon/동전.png" alt=""></span>
-        	<button type="button" ><a href="/webtoon/pay">충전하기</a></button>
+        	<button type="button" ><a href="/webtoon/pay/cardDetail">충전하기</a></button>
     </div>
     <hr>
     <ul>
         <li><a href="/webtoon/pay/add"><div class="icon"><img src="/webtoon/resources/img/icon/결제내역.png" alt="결제내역 아이콘"></div>카드등록</a></li>
+        <hr>
+                <li><a href="/webtoon/pay/cardDetail2"><div class="icon"><img src="/webtoon/resources/img/icon/결제내역.png" alt="결제내역 아이콘"></div>내카드 정보</a></li>
         <hr>
         <li><a href="/webtoon/pay/paymentDetail"><div class="icon"><img src="/webtoon/resources/img/icon/결제내역.png" alt="결제내역 아이콘"></div>결제내역</a></li>
         <hr>
