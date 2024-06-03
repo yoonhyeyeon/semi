@@ -11,12 +11,11 @@ import webtoon.customer.vo.CustomerInquiryVo;
 
 public class CustomerInquiryDao {
 	public int insertInquiry(Connection conn, CustomerInquiryVo vo) throws SQLException {
-	    String sql = "INSERT INTO CUSTOMER_INQUIRY (INQUIRY_NO, MEMBER_NO, TITLE, CONTENT, ENROLL_DATE) VALUES (SEQ_CUSTOMER_INQUIRY_NO.NEXTVAL, ?, ?, ?, TO_DATE(?, 'YYYY-MM-DD HH24:MI:SS'))";
+	    String sql = "INSERT INTO CUSTOMER_INQUIRY (INQUIRY_NO, MEMBER_NO, TITLE, CONTENT, ENROLL_DATE) VALUES (SEQ_CUSTOMER_INQUIRY_NO.NEXTVAL, ?, ?, ?, SYSDATE)";
 	    try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
 	        pstmt.setString(1, vo.getMemberNo());
 	        pstmt.setString(2, vo.getTitle());
 	        pstmt.setString(3, vo.getContent());
-	        pstmt.setString(4, vo.getEnrollDate());
 	        return pstmt.executeUpdate();
 	    }
 	}

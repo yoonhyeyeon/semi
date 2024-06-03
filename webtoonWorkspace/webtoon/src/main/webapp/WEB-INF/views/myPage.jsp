@@ -36,7 +36,7 @@
         <hr>
         <li><a href="/webtoon/board/notion/list"><div class="icon"><img src="/webtoon/resources/img/icon/공지사항.png" alt="공지사항 아이콘"></div>공지사항</a></li>
         <hr>
-        <li><a href="/HTML/service_center.html"><div class="icon"><img src="/webtoon/resources/img/icon/고객센터.png" alt="고객센터 아이콘"></div>고객센터</a></li>
+        <li><a href="/webtoon//customer/home"><div class="icon"><img src="/webtoon/resources/img/icon/고객센터.png" alt="고객센터 아이콘"></div>고객센터</a></li>
         <hr>
         <li><a href="#"><div class="icon"><img src="/webtoon/resources/img/icon/쿠폰등록.png" alt="쿠폰등록 아이콘"></div>쿠폰등록</a></li>
         <hr>
