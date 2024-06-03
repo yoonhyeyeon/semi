@@ -50,7 +50,7 @@ function ChatLoad(refEpisodeNo){
 				str += "<div class='comment'>";
 				str += "<strong>"+voList[i].nick+"</strong>"+" | "+"<span>"+voList[i].content+"</span>";
 				str += "</div>";
-				str += "<span class = 'day'>"+voList[i].enrollDate+"</span>";
+				str += "<span class = 'day'>2024-06-05</span>";
 				str += "<button class='good'>"+"👍"+voList[i].hit+"</button>";
 				str += "</div>";
 				str += "<hr id='webtoon_foot'>" ;
