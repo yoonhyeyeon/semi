@@ -22,39 +22,18 @@ public class EpisodeDao {
 
 	public int episodeInsert(Connection conn, EpisodeVo vo) throws Exception {
 		
-		String sql = "INSERT INTO WEBTOON_EPISODE (NO, WEBTOON_NAME, TITLE, WRITER) VALUES(SEQ_WEBTOON_EPISODE_NO.NEXTVAL, ?, ?, ?)";
+		String sql = "INSERT INTO WEBTOON_EPISODE (NO, WEBTOON_NAME, TITLE, WRITER , PROFILE ) VALUES(SEQ_WEBTOON_EPISODE_NO.NEXTVAL, ?, ?, ?, ?)";
 		PreparedStatement pstmt = conn.prepareStatement(sql);
 		pstmt.setString(1, vo.getWebtoonName());
 		pstmt.setString(2, vo.getTitle());
 		pstmt.setString(3, vo.getWriter());
+		pstmt.setString(4, vo.getProfile());
 		
 		int result = pstmt.executeUpdate();
 		
 		close(conn);
 		
 		return result;
-	}
-
-	public List<CategoryVo> getCategoryVoList(Connection conn) throws Exception {
-		String sql = "SELECT * FROM CATEGORY ORDER BY NO DESC";
-		PreparedStatement pstmt = conn.prepareStatement(sql);
-		ResultSet rs = pstmt.executeQuery();
-		
-		List<CategoryVo> categoryVoList = new ArrayList<CategoryVo>();
-		while(rs.next()) {
-			String no = rs.getString("NO");
-			String name = rs.getString("NAME");
-			
-			CategoryVo vo = new CategoryVo();
-			vo.setNo(no);
-			vo.setName(name);
-			categoryVoList.add(vo);
-			
-		}
-		close(rs);
-		close(pstmt);
-		return categoryVoList;
-		
 	}
 
 	public int getEpisodeCnt(Connection conn) throws Exception {

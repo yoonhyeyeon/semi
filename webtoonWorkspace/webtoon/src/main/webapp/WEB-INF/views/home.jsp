@@ -88,11 +88,6 @@
         <div class="webtoon-days">
             <div class="webtoon-day" id="monday">
                 <h3>월</h3>
-                		<c:forEach items="${voList}" var="vo">
-						        <div class="webtoon-item">
-						            <a href="/webtoon/episode?no=${vo.no}"><img src="/webtoon/resources/uploadimg/${vo.profile}" alt="웹툰 이미지"></a>
-						        </div>
-						</c:forEach>
                 <div class="webtoon-grid">
 						<c:forEach items="${voList}" var="vo">
 						    <c:if test="${vo.day == 1}">

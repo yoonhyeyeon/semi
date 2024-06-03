@@ -72,15 +72,4 @@ public class HomeService {
 		return result;
 	}
 
-	public List<CategoryVo> getCategoryVoList() throws Exception {
-		Connection conn = getConnection();
-		List<CategoryVo> categoryVoList = dao.getCategoryVoList(conn);
-		
-		close(conn);
-		
-		return categoryVoList;
-		
-	}
-
-
 }

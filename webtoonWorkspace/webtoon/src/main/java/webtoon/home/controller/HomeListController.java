@@ -26,19 +26,12 @@ public class HomeListController extends HttpServlet{
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		try {
-//			int listCount = hs.getHomeCnt();
-//			String x = req.getParameter("pno") == null ? "1" : req.getParameter("pno");
-//			int currentPage = Integer.parseInt(x);
-//			int pageLimit = 5;
-//			int boardLimit = 10;
 			
-//			PageVo pvo = new PageVo(listCount, currentPage, listCount, currentPage);
 			List<HomeVo> voList = hs.HomeList();
 			
 			req.setAttribute("voList", voList);
 			System.out.println(voList);
 			
-//			req.setAttribute("pvo", pvo);
 			req.getRequestDispatcher("/WEB-INF/views/home.jsp").forward(req, resp);
 		}catch(Exception e) {
 			e.printStackTrace();

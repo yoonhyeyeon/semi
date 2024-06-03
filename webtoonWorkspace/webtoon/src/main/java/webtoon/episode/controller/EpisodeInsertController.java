@@ -30,15 +30,7 @@ public class EpisodeInsertController extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		try {
-			EpisodeService es = new EpisodeService();
-			List<CategoryVo> categoryVoList = es.getCategoryVoList();
-			
-			req.setAttribute("categoryVoList", categoryVoList);
 			req.getRequestDispatcher("/WEB-INF/views/webtoon/episode_insert.jsp").forward(req, resp);
-		}catch(Exception e) {
-			e.printStackTrace();
-		}
 		
 	}
 	
@@ -61,7 +53,7 @@ public class EpisodeInsertController extends HttpServlet{
 				String orginFileName = profile.getSubmittedFileName();
 				InputStream is = profile.getInputStream();
 				
-				String path = "C:\\Users\\혜연\\Documents\\dev\\webtoon\\webtoonWorkspace\\webtoon\\src\\main\\webapp\\resources\\uploadimg\\";
+				String path = "D:\\dev\\webtoon\\webtoonWorkspace\\webtoon\\src\\main\\webapp\\resources\\uploadimg\\";
 				String random = UUID.randomUUID().toString();
 				String ext = orginFileName.substring(orginFileName.lastIndexOf("."));
 				changeName = System.currentTimeMillis() + "_" + random + ext;
@@ -86,6 +78,8 @@ public class EpisodeInsertController extends HttpServlet{
 			
 			EpisodeService es = new EpisodeService();
 			int result = es.episodeInsert(vo);
+			
+			System.out.println(vo);
 			
 			resp.sendRedirect("/webtoon/episode");
 		}catch(Exception e) {
