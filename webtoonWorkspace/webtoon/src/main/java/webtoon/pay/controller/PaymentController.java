@@ -102,8 +102,8 @@ public class PaymentController extends HttpServlet{
 			if(result3 != 1) {
 				throw new Exception("결제 오류입니다.");
 			}
-			session.setAttribute("alertMsg", "결제완료!");
 			session.setAttribute("loginMemberVo", vo);
+			session.setAttribute("alertMsg", "결제완료!");
 			resp.sendRedirect("/webtoon/myPage");
 		
 
