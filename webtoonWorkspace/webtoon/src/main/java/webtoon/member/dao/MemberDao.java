@@ -5,6 +5,8 @@ import static webtoon.db.JDBCTemplate.close;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
 import webtoon.member.vo.MemberVo;
 
@@ -112,5 +114,49 @@ public class MemberDao {
 		close(pstmt);
 		
 		return cnt;
+	}
+
+	public List<MemberVo> getAllMembers(Connection conn) throws Exception {
+	    String sql = "SELECT * FROM MEMBER WHERE DEL_YN = 'N'";
+	    PreparedStatement pstmt = conn.prepareStatement(sql);
+	    ResultSet rs = pstmt.executeQuery();
+	    
+	    List<MemberVo> member = new ArrayList<MemberVo>();
+	    while (rs.next()) {
+	    	String no = rs.getString("NO");
+	    	int vipNo = rs.getInt("VIP_NO");
+	    	int mcoin = rs.getInt("MCOIN");
+	    	int payTotal = rs.getInt("PAY_TOTAL");
+	    	String id = rs.getString("ID") ;
+	    	String pwd = rs.getString("PWD");
+	    	String nick = rs.getString("NICK");
+	    	String adrress = rs.getString("ADDRESS");
+	    	String phone = rs.getString("PHONE") ;
+	    	String interestedYn = rs.getString("INTERESTED_YN");
+	    	String enrollDate = rs.getString("ENROLL_DATE") ;
+	    	String modifyDate = rs.getString("MODIFY_DATE"); 
+	    	String delYn = rs.getString("DEL_YN");
+	        
+	    	
+	    	MemberVo vo = new MemberVo();
+	        vo.setNo(no);
+	        vo.setVip_no(vipNo);
+	        vo.setMcoin(mcoin);
+	        vo.setPay_total(payTotal);
+	        vo.setId(id);
+	        vo.setPwd(pwd);
+	        vo.setNick(nick);
+	        vo.setAddress(adrress);
+	        vo.setPhone(phone);
+	        vo.setInterested_yn(interestedYn);
+	        vo.setEnroll_date(enrollDate);
+	        vo.setModify_date(modifyDate);
+	        vo.setDel_yn(delYn);
+	        
+	        member.add(vo);
+	    }
+	    close(rs);
+	    close(pstmt);
+	    return member;
 	}
 }
