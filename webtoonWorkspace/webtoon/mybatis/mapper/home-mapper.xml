@@ -5,7 +5,9 @@
 <mapper namespace="HomeMapper">
 	
 	<select id="home_list" resultType="webtoon.home.vo.HomeVo">
-		SELECT NAME
+		SELECT
+			NAME
+			,PROFILE
 		FROM WEBTOON
 	</select>
 

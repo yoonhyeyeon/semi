@@ -20,9 +20,9 @@ import webtoon.home.vo.HomeVo;
 import webtoon.webtoon.vo.CategoryVo;
 
 @MultipartConfig(
-		maxFileSize = 1024 * 1024 * 50 ,
-		maxRequestSize = 1024 * 1024 * 500 ,
-		fileSizeThreshold = 1024 * 1024 * 50
+		maxFileSize = 1024 * 1024 * 100 ,
+		maxRequestSize = 1024 * 1024 * 1000 ,
+		fileSizeThreshold = 1024 * 1024 * 100
 		)
 
 
@@ -31,19 +31,8 @@ public class HomeInsertController extends HttpServlet{
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-		try{
-			HomeService hs = new HomeService();
-			List<CategoryVo> categoryVoList = hs.getCategoryVoList();
 			
-			req.setAttribute("categoryVoList", categoryVoList);
 			req.getRequestDispatcher("/WEB-INF/views/webtoon/home_insert.jsp").forward(req, resp);
-		}catch(Exception e) {
-			e.printStackTrace();
-			req.setAttribute("errMsg", e.getMessage());
-			req.getRequestDispatcher("/WEB-INF/views/common/error.jsp").forward(req, resp);
-		}
-		
 	}
 	
 	@Override
@@ -80,25 +69,6 @@ public class HomeInsertController extends HttpServlet{
 				fos.close();
 				
 			}
-//			List<Part> fileList = new ArrayList<Part>();
-//			for (Part part : parts) {
-//				if(part.getContentType() != null) {
-//					fileList.add(part);
-//				}
-//			}
-//			
-//			List<AttachmentVo> voList = new ArrayList<AttachmentVo>();
-//			for (Part f : fileList) {
-//				AttachmentVo attVo = FileUpload.saveFile(f);
-//				voList.add(attVo);
-//			}
-			
-//			HomeVo vo = new HomeVo();
-//			vo.setNo(no);
-//			vo.setGenre_no(genreNo);
-//			vo.setName(name);
-//			vo.setDay(day);
-//			vo.setHit(hit);
 			
 			HomeVo vo = new HomeVo();
 			vo.setNo(no);
@@ -111,9 +81,6 @@ public class HomeInsertController extends HttpServlet{
 			HomeService hs = new HomeService();
 			int result = hs.HomeInsert(vo);
 			
-			System.out.println(vo);
-			
-			req.setAttribute("vo", vo);
 			resp.sendRedirect("/webtoon/home");
 		}catch(Exception e) {
 			e.printStackTrace();

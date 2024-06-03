@@ -20,20 +20,36 @@ public class HomeDao {
 
 	public List<HomeVo> HomeList(Connection conn) throws Exception {
 //		return ss.selectList("HomeMapper.home_list", pvo);
-		String sql = "SELECT NO, NAME FROM WEBTOON";
+		String sql = "SELECT * FROM WEBTOON";
 		PreparedStatement pstmt = conn.prepareStatement(sql);
 		ResultSet rs = pstmt.executeQuery();
 		
 		List<HomeVo> voList = new ArrayList<HomeVo>();
 		
 		while( rs.next() ) {
-			String name = rs.getString("NAME");
 			String no = rs.getNString("NO");
+			String name = rs.getString("NAME");
+			String genre_no = rs.getString("GENRE_NO");
+			String day = rs.getString("DAY");
+			String hit = rs.getString("HIT");
+			String great = rs.getString("GREAT");
+			String enroll_date = rs.getString("ENROLL_DATE");
+			String modify_date = rs.getString("MODIFY_DATE");
+			String del_yn = rs.getString("DEL_YN");
+			String profile = rs.getString("PROFILE");
+			
 			
 			HomeVo vo = new HomeVo();
-			vo.setName(name);
 			vo.setNo(no);
-			
+			vo.setName(name);
+			vo.setGenre_no(genre_no);
+			vo.setDay(day);
+			vo.setHit(hit);
+			vo.setGreat(great);
+			vo.setEnrollDate(enroll_date);
+			vo.setModifyDate(modify_date);
+			vo.setDelYn(del_yn);
+			vo.setProfile(profile);
 			voList.add(vo);
 		}
 		close(rs);
@@ -79,27 +95,5 @@ public class HomeDao {
 //		return ss.insert("HomeMapper.insertHomeAttachment", voList);
 //		
 //	}
-
-	public List<CategoryVo> getCategoryVoList(Connection conn) throws Exception {
-		String sql = "SELECT * FROM CATEGORY ORDER BY NO DESC";
-		PreparedStatement pstmt = conn.prepareStatement(sql);
-		ResultSet rs = pstmt.executeQuery();
-		
-		List<CategoryVo> categoryVoList = new ArrayList<CategoryVo>();
-		while(rs.next()) {
-			String no = rs.getString("NO");
-			String name= rs.getString("NAME");
-			
-			CategoryVo vo = new CategoryVo();
-			vo.setNo(no);
-			vo.setName(name);
-			categoryVoList.add(vo);
-		}
-		close(rs);
-		close(pstmt);
-		return categoryVoList;
-		
-		
-	}
 
 }

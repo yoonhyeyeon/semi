@@ -47,18 +47,6 @@ public class EpisodeService {
 		
 	}
 
-
-	public List<CategoryVo> getCategoryVoList() throws Exception {
-		Connection conn = getConnection();
-		List<CategoryVo> categoryVoList = dao.getCategoryVoList(conn);
-		
-		close(conn);
-		
-		return categoryVoList;
-		
-	}
-
-
 	public int getEpisodeCnt() throws Exception{
 		Connection conn = getConnection();
 		int cnt = dao.getEpisodeCnt(conn);

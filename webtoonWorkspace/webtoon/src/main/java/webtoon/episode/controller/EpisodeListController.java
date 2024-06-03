@@ -25,15 +25,11 @@ public class EpisodeListController extends HttpServlet{
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		try {
-//			int listCount = es.getEpisodeCnt();
-//			String x = req.getParameter("pno") == null ? "1" : req.getParameter("pno");
-//			int currenPage = Integer.parseInt(x);
-			
+
 			List<EpisodeVo> voList = es.EpisodeList();
 			
 			req.setAttribute("voList", voList);
 			
-			System.out.println(voList);
 			req.getRequestDispatcher("/WEB-INF/views/webtoon/episode.jsp").forward(req, resp);
 		}catch(Exception e) {
 			e.printStackTrace();

@@ -30,15 +30,7 @@ public class EpisodeInsertController extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		try {
-			EpisodeService es = new EpisodeService();
-			List<CategoryVo> categoryVoList = es.getCategoryVoList();
-			
-			req.setAttribute("categoryVoList", categoryVoList);
 			req.getRequestDispatcher("/WEB-INF/views/webtoon/episode_insert.jsp").forward(req, resp);
-		}catch(Exception e) {
-			e.printStackTrace();
-		}
 		
 	}
 	
@@ -87,7 +79,8 @@ public class EpisodeInsertController extends HttpServlet{
 			EpisodeService es = new EpisodeService();
 			int result = es.episodeInsert(vo);
 			
-//			req.setAttribute("vo", vo);
+			System.out.println(vo);
+			
 			resp.sendRedirect("/webtoon/episode");
 		}catch(Exception e) {
 			e.printStackTrace();

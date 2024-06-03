@@ -6,10 +6,12 @@
 	
 	<select id="episode_list" resultType="webtoon.episode.vo.EpisodeVo">
 		SELECT
-		    WEBTOON_NAME
+			NO
+		    , WEBTOON_NAME
 		    , TITLE
 		    , WRITER
 		    , ENROLL_DATE
+		    , PROFILE
 		FROM WEBTOON_EPISODE
 		ORDER BY NO DESC
 	</select>
