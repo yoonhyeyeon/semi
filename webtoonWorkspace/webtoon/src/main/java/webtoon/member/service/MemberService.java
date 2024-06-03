@@ -6,6 +6,7 @@ import static webtoon.db.JDBCTemplate.getConnection;
 import static webtoon.db.JDBCTemplate.rollback;
 
 import java.sql.Connection;
+import java.util.List;
 
 import webtoon.member.dao.MemberDao;
 import webtoon.member.vo.MemberVo;
@@ -117,6 +118,19 @@ public class MemberService {
 		close(conn);
 		
 		return result == 0;
+	}
+
+
+	public List<MemberVo> getAllMembers() throws Exception {
+	    Connection conn = getConnection();
+	   
+	        List<MemberVo> members = dao.getAllMembers(conn);
+	        
+	        close(conn);
+	        return members;
+	        
+	   
+	    
 	}
 	
 }
