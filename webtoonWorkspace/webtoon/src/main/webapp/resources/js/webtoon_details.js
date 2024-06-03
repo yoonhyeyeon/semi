@@ -26,7 +26,7 @@ function Chatwrite(refEpisodeNo){
 		},
 		success : function(x){
 			console.log(x);
-			loadChatList(refEpisodeNo);
+			ChatLoad(refEpisodeNo);
 		},
 		fail : function(x){
 			console.log(x);

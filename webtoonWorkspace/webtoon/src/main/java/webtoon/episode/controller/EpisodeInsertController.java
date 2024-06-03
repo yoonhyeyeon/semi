@@ -79,8 +79,6 @@ public class EpisodeInsertController extends HttpServlet{
 			EpisodeService es = new EpisodeService();
 			int result = es.episodeInsert(vo);
 			
-			System.out.println(vo);
-			
 			resp.sendRedirect("/webtoon/episode");
 		}catch(Exception e) {
 			e.printStackTrace();

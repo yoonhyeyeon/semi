@@ -56,4 +56,16 @@ public class EpisodeService {
 		return cnt;
 	}
 
+
+	public EpisodeVo getEpisodeByNo(String no) throws Exception {
+		
+		SqlSession ss = getSqlSession();
+		
+		EpisodeVo vo = dao.getEpisodeByNo(ss , no);
+		
+		ss.close();
+		return vo;
+		
+	}
+
 }

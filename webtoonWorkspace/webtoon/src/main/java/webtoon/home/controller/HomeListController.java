@@ -30,7 +30,6 @@ public class HomeListController extends HttpServlet{
 			List<HomeVo> voList = hs.HomeList();
 			
 			req.setAttribute("voList", voList);
-			System.out.println(voList);
 			
 			req.getRequestDispatcher("/WEB-INF/views/home.jsp").forward(req, resp);
 		}catch(Exception e) {

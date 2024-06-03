@@ -23,20 +23,20 @@
 	
 	<select id="chatList" resultType="webtoon.chat.vo.ChatVo">
 		SELECT
-		    C.CONTENT
+		    C.NO
+		    , W.NO AS REF_EPISODE_NO
 		    , M.NICK
-		    , C.ENROLL_DATE
+		    , C.CONTENT
 		    , C.HIT
+		    , C.ENROLL_DATE
 		FROM CHAT C
-		JOIN MEMBER M ON C.MEMBER_NO = M.NO
+		JOIN WEBTOON_EPISODE W
+		ON C.REF_EPISODE_NO = W.NO
+		JOIN MEMBER M
+		ON C.MEMBER_NO = M.NO
 		WHERE C.REF_EPISODE_NO = #{refEpisodeNo}
 		AND C.DEL_YN = 'N'
 		ORDER BY C.HIT DESC
-	</select>
-
-	<select id="getChat" resultType="webtoon.chat.vo.ChatVo">
-	  SELECT *
-	  FROM CHAT
 	</select>
 
 </mapper>
