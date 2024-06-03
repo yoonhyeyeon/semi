@@ -23,23 +23,26 @@
         </div>
     </header>
     <hr class="webtoon-hr">
-    <div id="webtoon-navigation">
-        <div id="webtoon-title">
         <form action="/webtoon/episode/insert" method="post" enctype="multipart/form-data">
-        <span>웹툰 번호</span>&nbsp; <input type="number" name="no">
-        <br>
-        <span>웹툰 이름</span>&nbsp; <input type="text" name="webtoonName">
-        <br>
-        <span>작가</span>&nbsp; <input type="text" name="writer">
-        <br>
-        <span>회차 제목</span> <input type="text" name="title">
+        <div class="insert_box">
+        	<div>
+		        <span>웹툰 번호</span>&nbsp; <input type="number" name="no">
+        	</div>
+        	<div>
+		        <span>웹툰 이름</span>&nbsp; <input type="text" name="webtoonName">
+        	</div>
+        	<div>
+		        <span>작가</span>&nbsp; <input type="text" name="writer">
+        	</div>
+        	<div>
+		        <span>회차 제목</span> <input type="text" name="title">
+        	</div>
+        	<div>
+		        <span>회차 썸네일</span>&nbsp;<input type="file" name="profile">
+        	</div>
+		    <input class="go" type="submit" value="작성하기">
         </div>
-        <br>
-        <div id="webtoon-links">
-	        <span>회차 썸네일</span>&nbsp;<input type="file" name="profile">
-	        <input type="submit" value="작성하기">
 	    </form>
-        </div>
     </div>
 
 </body>

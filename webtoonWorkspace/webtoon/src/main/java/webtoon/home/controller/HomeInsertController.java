@@ -65,7 +65,7 @@ public class HomeInsertController extends HttpServlet{
 				String orginFileName = profile.getSubmittedFileName();
 				InputStream is = profile.getInputStream();
 				
-				String path = "C:\\Users\\혜연\\Documents\\dev\\webtoon\\webtoonWorkspace\\webtoon\\src\\main\\webapp\\resources\\uploadimg\\";
+				String path = "D:\\dev\\webtoon\\webtoonWorkspace\\webtoon\\src\\main\\webapp\\resources\\uploadimg\\";
 				String random = UUID.randomUUID().toString();
 				String ext = orginFileName.substring(orginFileName.lastIndexOf("."));
 				changeName = System.currentTimeMillis() + "_" + random + ext;
@@ -111,6 +111,9 @@ public class HomeInsertController extends HttpServlet{
 			HomeService hs = new HomeService();
 			int result = hs.HomeInsert(vo);
 			
+			System.out.println(vo);
+			
+			req.setAttribute("vo", vo);
 			resp.sendRedirect("/webtoon/home");
 		}catch(Exception e) {
 			e.printStackTrace();

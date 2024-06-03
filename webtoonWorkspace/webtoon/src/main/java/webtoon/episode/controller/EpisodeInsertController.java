@@ -61,7 +61,7 @@ public class EpisodeInsertController extends HttpServlet{
 				String orginFileName = profile.getSubmittedFileName();
 				InputStream is = profile.getInputStream();
 				
-				String path = "C:\\Users\\혜연\\Documents\\dev\\webtoon\\webtoonWorkspace\\webtoon\\src\\main\\webapp\\resources\\uploadimg\\";
+				String path = "D:\\dev\\webtoon\\webtoonWorkspace\\webtoon\\src\\main\\webapp\\resources\\uploadimg\\";
 				String random = UUID.randomUUID().toString();
 				String ext = orginFileName.substring(orginFileName.lastIndexOf("."));
 				changeName = System.currentTimeMillis() + "_" + random + ext;
@@ -87,6 +87,7 @@ public class EpisodeInsertController extends HttpServlet{
 			EpisodeService es = new EpisodeService();
 			int result = es.episodeInsert(vo);
 			
+//			req.setAttribute("vo", vo);
 			resp.sendRedirect("/webtoon/episode");
 		}catch(Exception e) {
 			e.printStackTrace();
