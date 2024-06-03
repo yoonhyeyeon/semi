@@ -37,7 +37,7 @@ public class PaymentDetailController extends HttpServlet{
 			PayService ps = new PayService();
 			List<PayVo> payVoList = ps.payVoList(pvo);
 			
-			session.setAttribute("payVoList", payVoList);
+			req.setAttribute("payVoList", payVoList);
 			
 			req.getRequestDispatcher("/WEB-INF/views/pay/paymentDetail.jsp").forward(req, resp);
 		}catch(Exception e) {
