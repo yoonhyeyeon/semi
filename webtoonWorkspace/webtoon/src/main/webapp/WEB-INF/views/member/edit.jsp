@@ -8,8 +8,10 @@
     <title>회원가입</title>
     <link rel="stylesheet" href="/webtoon/resources/css/edit.css">
     <script src="/webtoon/resources/js/join.js"></script>
+    
 </head>
 <body>
+
     <div class="container">
         <a href="/webtoon/home" id="img1">
             <img src="/webtoon/resources/img/logo/loginIcon.png" id="moont">
@@ -32,7 +34,7 @@
           <label for="text">주소</label>
           <input type="text" id="address"name="address" placeholder="변경할 주소"  value="${sessionScope.loginMemberVo.address}" required>
       </div>
-            <button type="submit">수정하기</button>
+            <button type="submit" onclick="f01();">수정하기</button>
         </form>
     </div>
     
