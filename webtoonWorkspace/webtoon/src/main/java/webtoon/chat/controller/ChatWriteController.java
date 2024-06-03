@@ -22,21 +22,29 @@ public class ChatWriteController extends HttpServlet{
 		
 		try {
 			HttpSession session = req.getSession();
+			String no = req.getParameter("no");
 			String refEpisodeNo = req.getParameter("refEpisodeNo");
 			String content = req.getParameter("content");
+			String enrollDate = req.getParameter("enrollDate");
 			
 			MemberVo loginMemberVo = (MemberVo) session.getAttribute("loginMemberVo");
 			String MemberNo = loginMemberVo.getNo();
+			String nick = loginMemberVo.getNick();
 			
 			ChatVo vo = new ChatVo();
+			vo.setNo(no);
 			vo.setRefEpisodeNo(refEpisodeNo);
 			vo.setContent(content);
 			vo.setMemberNo(MemberNo);
+			vo.setEnrollDate(enrollDate);
+			vo.setNick(nick);
 			
 			ChatService cs = new ChatService();
 			int result = cs.writeChat(vo);
+			
 			PrintWriter out = resp.getWriter();
 			out.write("result : " + result);
+//			resp.sendRedirect("/webtoon/details");
 		}catch(Exception e) {
 			e.printStackTrace();
 			req.setAttribute("errMsg", e.getMessage());

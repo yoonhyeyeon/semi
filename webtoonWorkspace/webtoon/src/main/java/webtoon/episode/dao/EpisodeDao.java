@@ -52,4 +52,8 @@ public class EpisodeDao {
 		
 	}
 
+	public EpisodeVo getEpisodeByNo(SqlSession ss, String no) {
+		return ss.selectOne("EpisodeMapper.episode_detail", no);
+	}
+
 }

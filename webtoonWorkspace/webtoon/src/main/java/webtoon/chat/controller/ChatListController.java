@@ -30,7 +30,7 @@ public class ChatListController extends HttpServlet{
 			Gson gson = new Gson();
 			String str = gson.toJson(voList);
 			
-			resp.setContentType("text/html; charset=UTP-8");
+			resp.setContentType("text/html; charset=UTF-8");
 			PrintWriter out = resp.getWriter();
 			out.write(str);
 		}catch(Exception e) {

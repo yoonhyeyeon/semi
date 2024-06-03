@@ -97,7 +97,6 @@
 				<c:when test="${not empty sessionScope.loginMemberVo}">
 				    <textarea name="content" id="commentText" placeholder="댓글을 입력해주세요."></textarea>
 		  			<br>
-		  			<h1>@@@@@@@@@@@@@@@@@@@ ${vo}</h1>
 		    		<button class="do" onclick="Chatwrite(${vo.no});">등록</button>
 				</c:when>
 				<c:otherwise>

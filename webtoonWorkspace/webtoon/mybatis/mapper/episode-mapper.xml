@@ -16,5 +16,16 @@
 		ORDER BY NO DESC
 	</select>
 
+	<select id="episode_detail" resultType="webtoon.episode.vo.EpisodeVo">
+		SELECT
+		    NO
+		    , WEBTOON_NAME
+		    , TITLE
+		    , WRITER
+		    , ENROLL_DATE
+		FROM WEBTOON_EPISODE
+		WHERE NO = ${no}
+	</select>
+
 </mapper>
 
