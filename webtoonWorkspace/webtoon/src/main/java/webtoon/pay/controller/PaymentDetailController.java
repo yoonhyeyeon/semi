@@ -23,7 +23,6 @@ public class PaymentDetailController extends HttpServlet{
 		try {
 			HttpSession session = req.getSession();
 			MemberVo loginMemberVo = (MemberVo)session.getAttribute("loginMemberVo");
-			PayVo payVo = (PayVo)session.getAttribute("payVo");
 			
 			if(loginMemberVo == null) {
 				throw new Exception("로그인을 해주세요");
@@ -37,8 +36,9 @@ public class PaymentDetailController extends HttpServlet{
 			PayService ps = new PayService();
 			List<PayVo> payVoList = ps.payVoList(pvo);
 			
-			req.setAttribute("payVoList", payVoList);
 			
+			req.setAttribute("payVoList", payVoList);
+			req.setAttribute("loginMemberVo", loginMemberVo);
 			req.getRequestDispatcher("/WEB-INF/views/pay/paymentDetail.jsp").forward(req, resp);
 		}catch(Exception e) {
 			e.printStackTrace();
