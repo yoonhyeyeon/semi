@@ -103,6 +103,8 @@ public class PayService {
 		Connection conn = getConnection();
 		List<PayVo> pvoList = dao.payVoList(conn, vo);
 		
+		close(conn);
+		
 		return pvoList;
 	}
 

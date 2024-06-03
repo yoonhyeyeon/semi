@@ -27,10 +27,12 @@
     </ul>
         <li>회원번호 : ${sessionScope.loginMemberVo.no}</li>
         <hr>
-        <c:forEach items="${payVoList}" >
-        	<p>결제 금액 : ${payVoList.pay}</p> 
-        	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        	<p>결제 일시 : ${payVoList.enroll_date}</p>
+        <c:forEach items="${payVoList}" var="vo">
+        	결제가격 : ${vo.pay} 
+        	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        	결제일시 : ${vo.enroll_date}
+        	<hr>
         </c:forEach>
+        총결제 금액 : ${loginMemberVo.pay_total}원
 </body>
 </html>

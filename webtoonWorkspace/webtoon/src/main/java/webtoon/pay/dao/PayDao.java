@@ -112,25 +112,27 @@ public class PayDao {
 	public List<PayVo> payVoList(Connection conn,PayVo vo) throws Exception{
 		String sql ="SELECT * FROM PAYMENT WHERE MEMBER_NO = ?";
 		PreparedStatement pstmt = conn.prepareStatement(sql);
-		pstmt.setString(1, vo.getNo());
+		pstmt.setString(1, vo.getMember_no());
 		ResultSet rs = pstmt.executeQuery();
 		
 		
-			List<PayVo> pvoList = new ArrayList<PayVo>();
-			
-			while(rs.next()) {
+		List<PayVo> pvoList = new ArrayList<PayVo>();
+		
+		while(rs.next()) {
 			String no = rs.getString("no");
+			String mno = rs.getString("MEMBER_NO");
+			String pno = rs.getString("PAYMENT_METHOD_NO");
 			int pay = rs.getInt("pay");
 			String enroll_date = rs.getString("ENROLL_DATE");
 			
 			PayVo pvo = new PayVo();
 			pvo.setNo(no);
+			pvo.setMember_no(mno);
+			pvo.setPayment_method_no(pno);
 			pvo.setPay(pay);
 			pvo.setEnroll_date(enroll_date);
 			
-			
 			pvoList.add(pvo);
-			
 		}
 		close(rs);
 		close(pstmt);
