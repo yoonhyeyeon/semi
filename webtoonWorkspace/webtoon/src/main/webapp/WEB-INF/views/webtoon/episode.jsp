@@ -38,19 +38,6 @@
                <h2>총 6화</h2> 
             </div>
             <hr> <!-- 여기에 구분선 추가 -->
-             <c:forEach items="${voList}" var="vo">
-	             <a href="/webtoon/details?no=${vo.no}">
-	                <div class="episode">
-	                    <img src="/webtoon/resources/uploadimg/${vo.profile}" alt="1화 이미지" class="episode-img">
-	                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	                    <div class="episode-info">
-	                        <h2>${vo.no}화. ${vo.title}</h2>
-	                        <p>${vo.enrollDate}</p>
-	                    </div>
-	                </div>
-	            </a>
-	            <hr> <!-- 여기에 구분선 추가 -->
-             </c:forEach>
 
             <a href="/webtoon/pay/payment2">
                 <div class="episode">
@@ -74,54 +61,22 @@
                     </div>
                 </div>
             </a>
+            <hr> <!-- 여기에 구분선 추가 -->
             
-            <hr> <!-- 여기에 구분선 추가 -->
-            <a href="/webtoon/details">
+            <c:forEach items="${voList}" var="vo">
+             <a href="/webtoon/details?no=${vo.no}">
                 <div class="episode">
-                    <img src="/webtoon/resources/img/episode/m03.jpg" alt="1화 이미지" class="episode-img">
+                    <img src="/webtoon/resources/uploadimg/${vo.profile}" alt="1화 이미지" class="episode-img">
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <div class="episode-info">
-                        <h2>3화. 화산귀환</h2>
-                        <p>2024-05-17</p>
+                        <h2>${vo.no}화. ${vo.title}</h2>
+                        <p>${vo.enrollDate}</p>
                     </div>
                 </div>
             </a>
-           
             <hr> <!-- 여기에 구분선 추가 -->
-            <a href="/webtoon/details">
-                <div class="episode">
-                    <img src="/webtoon/resources/img/episode/m04.jpg" alt="1화 이미지" class="episode-img">
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <div class="episode-info">
-                        <h2>4화. 화산귀환</h2>
-                        <p>2024-05-19</p>
-                    </div>
-                </div>
-            </a>
-           
-            <hr> <!-- 여기에 구분선 추가 -->
-            <a href="/webtoon/details">
-                <div class="episode">
-                    <img src="/webtoon/resources/img/episode/m05.jpg" alt="1화 이미지" class="episode-img">
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <div class="episode-info">
-                        <h2>5화. 화산귀환</h2>
-                        <p>2024-05-25</p>
-                    </div>
-                </div>
-            </a>
+            </c:forEach>
 
-            <hr> <!-- 여기에 구분선 추가 -->
-            <a href="/webtoon/details">
-                <div class="episode">
-                    <img src="/webtoon/resources/img/episode/m06.jpg" alt="1화 이미지" class="episode-img">
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <div class="episode-info">
-                        <h2>6화. 화산귀환</h2>
-                        <p>2024-05-31</p>
-                    </div>
-                </div>
-            </a>
             <br><br><br><br><br>
         </div>
 </body>
