@@ -46,7 +46,7 @@ public class PaymentController2 extends HttpServlet{
 	try {
 			
 			HttpSession session = req.getSession();
-			MemberVo loginMemberVo = (MemberVo)session.getAttribute("loginMemberVo");;
+			MemberVo loginMemberVo = (MemberVo)session.getAttribute("loginMemberVo");
 			
 
 	
