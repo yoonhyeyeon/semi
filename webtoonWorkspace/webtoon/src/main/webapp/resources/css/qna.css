@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #f4f4f4;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 60%; /* 전체 너비에서 양옆 마진을 40%로 설정하여 실제 내용은 60%만 차지하도록 함 */
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 12px;
+}
+
+h1 {
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc; /* 테두리를 미세하게 조정 */
+    border-radius: 8px;
+    background: #fff; /* 배경색을 흰색으로 설정 */
+}
+
+textarea {
+    resize: none; /* 사용자가 크기 조절 못하게 설정 */
+    height: 120px; /* 세로 크기를 늘림 */
+    border-radius: 8px;
+}
+
+button {
+    background-color: #5c67f2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+button:hover {
+    background-color: #4a54e1;
+}
