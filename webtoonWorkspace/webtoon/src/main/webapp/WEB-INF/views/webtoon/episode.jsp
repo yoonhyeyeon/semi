@@ -52,7 +52,7 @@
 	            <hr> <!-- 여기에 구분선 추가 -->
              </c:forEach>
 
-            <a href="/webtoon/details">
+            <a href="/webtoon/pay/payment2">
                 <div class="episode">
                     <img src="/webtoon/resources/img/episode/m01.jpg" alt="1화 이미지" class="episode-img">
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
