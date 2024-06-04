@@ -84,7 +84,7 @@ public class PaymentController2 extends HttpServlet{
 
 			session.setAttribute("loginMemberVo", vo);
 			session.setAttribute("alertMsg", "결제완료!");
-			resp.sendRedirect("/webtoon/details");
+			resp.sendRedirect("/webtoon/details?no=3");
 		
 
 	}catch(Exception e) {
