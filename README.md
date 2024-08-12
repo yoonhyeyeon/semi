@@ -114,6 +114,41 @@
 
 ## 🖥️ 화면 구성
 
+- 홈 화면
+![image](https://github.com/user-attachments/assets/4aea068d-a66d-405b-a403-4acb8eb400e8)
+
+- 로그인 화면
+![image](https://github.com/user-attachments/assets/f195b77f-0e5e-425c-95c6-021df50ba99e)
+
+- 회원가입 화면
+![image](https://github.com/user-attachments/assets/2a832da6-8702-4b0a-a6a4-8634ca7a8031)
+
+- 개인페이지
+![image](https://github.com/user-attachments/assets/f62bc26e-ec94-429f-a04f-7af0bddc7067)
+
+- 공지사항
+![image](https://github.com/user-attachments/assets/f5b06b9a-2f1e-4083-ac3e-401754934382)
+
+(일반 회원이 공지사항 글쓰기 입력시) <br />
+![image](https://github.com/user-attachments/assets/e10d76e7-a7e5-4613-a040-dbd8afc30393)
+
+- 상세 조회
+![image](https://github.com/user-attachments/assets/b3ee1a4c-0aa1-464c-ba71-23a57b90e8f5)
+
+- 자유게시판
+![image](https://github.com/user-attachments/assets/401c6eea-f12d-4d8c-aeab-fd81a70aa28e)
+- 상세 조회( 글쓴이한테만 수정, 삭제 버튼이 보임)
+![image](https://github.com/user-attachments/assets/c104349a-f4c8-48c9-a0d7-5e23c65fc800)
+
+- 관리자 페이지
+![image](https://github.com/user-attachments/assets/5c61f84f-837f-4587-87a7-857535eca02d)
+
+- 웹툰 등록
+![image](https://github.com/user-attachments/assets/b780db60-ff4f-4966-819b-b69a32e65c07)
+
+- 에피소드 페이지
+![image](https://github.com/user-attachments/assets/be6a40d0-b0af-4bc2-8379-cdfa03cd1e7e)
+
 ## 🗒️ 회고록
 이번 프로젝트에서는  웹툰, 게임모음, 쇼핑몰 등을 생각하다 팀원 모두가 공감한 주제인 '웹툰 사이트'를 선택하여, 웹툰을 등록하고 보여주는 기능을 구현하기로 했습니다. <br />
 
