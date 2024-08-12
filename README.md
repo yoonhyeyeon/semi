@@ -79,7 +79,6 @@
 <span>- 카드 등록</span> <br />
 <span>- 카드 조회</span> <br />
 <span>- 충전하기</span> <br />
-<h4>[결제]</h4>
 <span>- 웹툰 구매</span> <br />
 
 ***
